@@ -1,0 +1,32 @@
+﻿  CEntity.cpp
+  ConsoleInput.cpp
+  ConsoleOutput.cpp
+  CPeaShooter.cpp
+  CPlants.cpp
+  CSun.cpp
+c:\users\bogda\desktop\pvsz\pvsz\csun.cpp(32): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\bogda\desktop\pvsz\pvsz\csun.cpp(63): warning C4309: 'initializing': truncation of constant value
+  CTeren.cpp
+c:\users\bogda\desktop\pvsz\pvsz\cteren.cpp(8): warning C4309: 'initializing': truncation of constant value
+  CTeren_1.cpp
+  CTeren_2.cpp
+  CTeren_3.cpp
+  CZombie.cpp
+  Main.cpp
+c:\users\bogda\desktop\pvsz\pvsz\main.cpp(197): warning C4244: 'initializing': conversion from 'time_t' to 'int', possible loss of data
+c:\users\bogda\desktop\pvsz\pvsz\main.cpp(203): warning C4244: 'initializing': conversion from 'time_t' to 'int', possible loss of data
+c:\users\bogda\desktop\pvsz\pvsz\main.cpp(218): warning C4244: '=': conversion from 'time_t' to 'int', possible loss of data
+  Compiling...
+  Generating code
+  All 449 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  PvsZ.vcxproj -> C:\Users\bogda\Desktop\pvsz\x64\Release\PvsZ.exe
+c:\users\bogda\desktop\pvsz\pvsz\consoleinput.cpp(14): warning C26495: Variable 'UserInterface::ConsoleInput::irInBuf' is uninitialized. Always initialize a member variable (type.6).
+c:\users\bogda\desktop\pvsz\pvsz\cplants.cpp(23): warning C26495: Variable 'CPlants::health' is uninitialized. Always initialize a member variable (type.6).
+c:\users\bogda\desktop\pvsz\pvsz\csun.cpp(79): warning C26495: Variable 'CSun::x_beg' is uninitialized. Always initialize a member variable (type.6).
+c:\users\bogda\desktop\pvsz\pvsz\csun.cpp(83): warning C26495: Variable 'CSun::x_beg' is uninitialized. Always initialize a member variable (type.6).
+c:\users\bogda\desktop\pvsz\pvsz\cteren.cpp(38): warning C26495: Variable 'CTeren::level' is uninitialized. Always initialize a member variable (type.6).
+c:\users\bogda\desktop\pvsz\pvsz\czombie.cpp(11): warning C26495: Variable 'CZombie::health' is uninitialized. Always initialize a member variable (type.6).
+c:\users\bogda\desktop\pvsz\pvsz\main.cpp(244): warning C6031: Return value ignored: '_getch'.
+c:\users\bogda\desktop\pvsz\pvsz\main.cpp(196): warning C26451: Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).
+c:\users\bogda\desktop\pvsz\pvsz\main.cpp(196): warning C26451: Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).

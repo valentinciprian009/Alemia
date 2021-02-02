@@ -1,0 +1,27 @@
+﻿  BucketHead_Zombie.cpp
+  CherryBomb.cpp
+  ConsoleInput.cpp
+  ConsoleOutput.cpp
+  Game.cpp
+  Main.cpp
+  PeaShooter.cpp
+  Plant.cpp
+  PoleVaulting_Zombie.cpp
+  Score.cpp
+  SnowPea.cpp
+  Source.cpp
+  Sun.cpp
+  SunFLower.cpp
+  Teren.cpp
+c:\users\sebastian\desktop\plants vs zombie\p vs z\teren.cpp(36): warning C4309: '=': truncation of constant value
+c:\users\sebastian\desktop\plants vs zombie\p vs z\teren.cpp(41): warning C4309: '=': truncation of constant value
+c:\users\sebastian\desktop\plants vs zombie\p vs z\teren.cpp(45): warning C4309: '=': truncation of constant value
+c:\users\sebastian\desktop\plants vs zombie\p vs z\teren.cpp(46): warning C4309: '=': truncation of constant value
+c:\users\sebastian\desktop\plants vs zombie\p vs z\teren.cpp(47): warning C4309: '=': truncation of constant value
+c:\users\sebastian\desktop\plants vs zombie\p vs z\teren.cpp(48): warning C4309: '=': truncation of constant value
+c:\users\sebastian\desktop\plants vs zombie\p vs z\teren.cpp(94): warning C4018: '<': signed/unsigned mismatch
+  Wall_nut.cpp
+  Zombi.cpp
+  Zombie.cpp
+  Generating Code...
+  P vs Z.vcxproj -> C:\Users\Sebastian\Desktop\Plants vs Zombie\Debug\P vs Z.exe

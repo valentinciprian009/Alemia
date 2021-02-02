@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Arena">
+      <UniqueIdentifier>{07d5c98e-ff05-4d19-a0b5-65ace6618bd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Console">
+      <UniqueIdentifier>{a2d94295-651c-475d-ad4f-3538c32a9b2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Plants">
+      <UniqueIdentifier>{b2bd84da-236c-4aaf-bdb1-b401e1b06ef8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Slides">
+      <UniqueIdentifier>{83ea5e68-4910-476c-8c06-ce3eae782561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\levels">
+      <UniqueIdentifier>{40276b87-43df-4dab-bd1d-7f1c04e3d4be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\pics">
+      <UniqueIdentifier>{5e9b7e39-51c6-4a6c-add5-8debb870e676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\text">
+      <UniqueIdentifier>{6d1156d0-f8c7-491d-82a1-007fd0348340}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Zombies">
+      <UniqueIdentifier>{08e02050-7b8a-4669-9db1-c70f46c27972}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Arena">
+      <UniqueIdentifier>{1dfc488f-386a-43d4-b3ca-c0f30598e01b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Console">
+      <UniqueIdentifier>{14ddb185-4bbc-40eb-a2b4-82c4d414c9c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interfaces/Abstract">
+      <UniqueIdentifier>{f1bc0166-e27f-44ac-83b2-b38c957f6ccd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Zombie">
+      <UniqueIdentifier>{0d530d46-aad5-47cc-831e-0710cd99450e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Plants">
+      <UniqueIdentifier>{35828ba2-550b-4877-a060-2679cbd271f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Slides">
+      <UniqueIdentifier>{28b2ea03-3a5b-4e80-b955-2c437bdfafd9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ITickable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ITimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="User.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArenaButtons.cpp">
+      <Filter>Source Files\Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="Constants.cpp">
+      <Filter>Source Files\Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>Source Files\Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Source Files\Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleInput.cpp">
+      <Filter>Source Files\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleOutput.cpp">
+      <Filter>Source Files\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="PoleZombie.cpp">
+      <Filter>Source Files\Zombie</Filter>
+    </ClCompile>
+    <ClCompile Include="Zombie.cpp">
+      <Filter>Source Files\Zombie</Filter>
+    </ClCompile>
+    <ClCompile Include="ZombieDispenser.cpp">
+      <Filter>Source Files\Zombie</Filter>
+    </ClCompile>
+    <ClCompile Include="CherryBomb.cpp">
+      <Filter>Source Files\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="FrozenPea.cpp">
+      <Filter>Source Files\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="Pea.cpp">
+      <Filter>Source Files\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="PeaShooterPlant.cpp">
+      <Filter>Source Files\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="Plant.cpp">
+      <Filter>Source Files\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="SunflowerPlant.cpp">
+      <Filter>Source Files\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadingSlide.cpp">
+      <Filter>Source Files\Slides</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginSlide.cpp">
+      <Filter>Source Files\Slides</Filter>
+    </ClCompile>
+    <ClCompile Include="StatusSlide.cpp">
+      <Filter>Source Files\Slides</Filter>
+    </ClCompile>
+    <ClCompile Include="Slide.cpp">
+      <Filter>Source Files\Slides</Filter>
+    </ClCompile>
+    <ClCompile Include="ArenaSlide.cpp">
+      <Filter>Source Files\Slides</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ArenaButtons.h">
+      <Filter>Header Files\Arena</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
+      <Filter>Header Files\Arena</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>Header Files\Arena</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Header Files\Arena</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleInput.h">
+      <Filter>Header Files\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleOutput.h">
+      <Filter>Header Files\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Header Files\Interfaces/Abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="IGameElement.h">
+      <Filter>Header Files\Interfaces/Abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="ITickable.h">
+      <Filter>Header Files\Interfaces/Abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="ITimer.h">
+      <Filter>Header Files\Interfaces/Abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="CherryBomb.h">
+      <Filter>Header Files\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="FrozenPea.h">
+      <Filter>Header Files\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="Pea.h">
+      <Filter>Header Files\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="PeaShooterPlant.h">
+      <Filter>Header Files\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="Plant.h">
+      <Filter>Header Files\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="PlantInfo.h">
+      <Filter>Header Files\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="SunflowerPlant.h">
+      <Filter>Header Files\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="ArenaSlide.h">
+      <Filter>Header Files\Slides</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadingSlide.h">
+      <Filter>Header Files\Slides</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginSlide.h">
+      <Filter>Header Files\Slides</Filter>
+    </ClInclude>
+    <ClInclude Include="Slide.h">
+      <Filter>Header Files\Slides</Filter>
+    </ClInclude>
+    <ClInclude Include="StatusSlide.h">
+      <Filter>Header Files\Slides</Filter>
+    </ClInclude>
+    <ClInclude Include="PoleZombie.h">
+      <Filter>Header Files\Zombies</Filter>
+    </ClInclude>
+    <ClInclude Include="User.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Zombie.h">
+      <Filter>Header Files\Zombies</Filter>
+    </ClInclude>
+    <ClInclude Include="ZombieDispenser.h">
+      <Filter>Header Files\Zombies</Filter>
+    </ClInclude>
+    <ClInclude Include="ZombieInfo.h">
+      <Filter>Header Files\Zombies</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="lvl0.txt">
+      <Filter>Resource Files\levels</Filter>
+    </Text>
+    <Text Include="lvl1.txt">
+      <Filter>Resource Files\levels</Filter>
+    </Text>
+    <Text Include="bucketzombie.txt">
+      <Filter>Resource Files\pics</Filter>
+    </Text>
+    <Text Include="cherry.txt">
+      <Filter>Resource Files\pics</Filter>
+    </Text>
+    <Text Include="peashooter.txt">
+      <Filter>Resource Files\pics</Filter>
+    </Text>
+    <Text Include="polezombie.txt">
+      <Filter>Resource Files\pics</Filter>
+    </Text>
+    <Text Include="sun.txt">
+      <Filter>Resource Files\pics</Filter>
+    </Text>
+    <Text Include="sunflower.txt">
+      <Filter>Resource Files\pics</Filter>
+    </Text>
+    <Text Include="wallnut.txt">
+      <Filter>Resource Files\pics</Filter>
+    </Text>
+    <Text Include="zombie.txt">
+      <Filter>Resource Files\pics</Filter>
+    </Text>
+    <Text Include="login.txt">
+      <Filter>Resource Files\text</Filter>
+    </Text>
+    <Text Include="logs.txt">
+      <Filter>Resource Files\text</Filter>
+    </Text>
+    <Text Include="title.txt">
+      <Filter>Resource Files\text</Filter>
+    </Text>
+    <Text Include="topplayers.txt">
+      <Filter>Resource Files\text</Filter>
+    </Text>
+    <Text Include="users.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>

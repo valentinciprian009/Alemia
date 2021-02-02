@@ -1,0 +1,6 @@
+Introduc numele si parola utilizatorului de la tastatura. Le copiez intr-un folder nume_jucatori (obs, daca pentru primul jucator nu imi merge, adica daca dati compilare pe fisier gol inchideti si mai dati o data). 
+Jucatorii vor avea nivelul 1 default.
+Verific daca numele jucatorului corespunde cu parola. Daca nu corespund voi arunca o eroare care imi inchide programul dupa un mesaj afisat. 
+Afisez toate entitatile. Aparitia lor va fi mentionata intr-un fisier log.
+Voi avea 2 vectori eterogeni: unul de zombie si altul de plante. In cei doi vectori tuple salvez pozitiile entitatilor. Cand intru in update ma ocup de tot ce inseamna plante. Toate peashooterele vor fi sincronizate. Daca viata e 0 sterg planta.
+Mai jos afisez random unul dintre zombie, verific daca spatiul urmator este gol pentru a inainta. Daca zombie-ul se loveste de un proiectil pierde viata si cand viata ajunge la 0 sterg zombie-ul. Mereu dupa ce deplasez entitatea la stanga ii sterg copia din dreapta. Daca zombie-ul ajunge la prima coloana atunci am pierdut jocul.

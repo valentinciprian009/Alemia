@@ -1,0 +1,13 @@
+Done processing ./preprocess/train/student_5/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_5/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_5/sources/Log.cpp
+Done processing ./preprocess/train/student_5/sources/Main.cpp
+Done processing ./preprocess/train/student_5/sources/buget.cpp
+Done processing ./preprocess/train/student_5/sources/draw.cpp
+Done processing ./preprocess/train/student_5/sources/entity.cpp
+Done processing ./preprocess/train/student_5/sources/plants.cpp
+Done processing ./preprocess/train/student_5/sources/sun.cpp
+Done processing ./preprocess/train/student_5/sources/sunManagement.cpp
+Done processing ./preprocess/train/student_5/sources/sunflower.cpp
+Done processing ./preprocess/train/student_5/sources/zombie.cpp
+Total errors found: 1010

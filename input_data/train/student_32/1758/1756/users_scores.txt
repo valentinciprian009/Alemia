@@ -1,0 +1,7 @@
+al 0
+alex 300
+aaron 2
+alexalex 150
+
+alex 40
+piu 270

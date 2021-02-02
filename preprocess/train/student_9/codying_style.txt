@@ -1,0 +1,8 @@
+Done processing ./preprocess/train/student_9/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_9/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_9/sources/Harta.cpp
+Done processing ./preprocess/train/student_9/sources/Main.cpp
+Done processing ./preprocess/train/student_9/sources/Plante.cpp
+Done processing ./preprocess/train/student_9/sources/Soare.cpp
+Done processing ./preprocess/train/student_9/sources/Zombie.cpp
+Total errors found: 734

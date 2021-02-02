@@ -1,0 +1,26 @@
+Done processing ./preprocess/train/student_2/sources/AbstractDrawable.cpp
+Done processing ./preprocess/train/student_2/sources/ActionParserFactory.cpp
+Done processing ./preprocess/train/student_2/sources/BlankSpace.cpp
+Done processing ./preprocess/train/student_2/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_2/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_2/sources/DefeatMenuParser.cpp
+Done processing ./preprocess/train/student_2/sources/DummyAction.cpp
+Done processing ./preprocess/train/student_2/sources/Game.cpp
+Done processing ./preprocess/train/student_2/sources/GameActions.cpp
+Done processing ./preprocess/train/student_2/sources/GenericFlower.cpp
+Done processing ./preprocess/train/student_2/sources/GenericZombie.cpp
+Done processing ./preprocess/train/student_2/sources/Logging.cpp
+Done processing ./preprocess/train/student_2/sources/MainMenuParser.cpp
+Done processing ./preprocess/train/student_2/sources/Map.cpp
+Done processing ./preprocess/train/student_2/sources/NewUserParser.cpp
+Done processing ./preprocess/train/student_2/sources/Pea.cpp
+Done processing ./preprocess/train/student_2/sources/PeaShooter.cpp
+Done processing ./preprocess/train/student_2/sources/PlayingParser.cpp
+Done processing ./preprocess/train/student_2/sources/SelectUserParser.cpp
+Done processing ./preprocess/train/student_2/sources/Source.cpp
+Done processing ./preprocess/train/student_2/sources/Sun.cpp
+Done processing ./preprocess/train/student_2/sources/Sunflower.cpp
+Done processing ./preprocess/train/student_2/sources/VictoryMenuParser.cpp
+Done processing ./preprocess/train/student_2/sources/WalkerZombie.cpp
+Done processing ./preprocess/train/student_2/sources/computerActionFactory.cpp
+Total errors found: 2424

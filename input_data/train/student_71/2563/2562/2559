@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Game Objects">
+      <UniqueIdentifier>{cb2cb995-fe1d-4291-91e4-2301055b5a15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Game Objects\Zombies">
+      <UniqueIdentifier>{e1fabb31-ad71-410c-bc51-ffa42207239c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Game Objects\Plants">
+      <UniqueIdentifier>{12221f6b-49d9-43f3-92ec-508cc6182701}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Game Objects\Resources">
+      <UniqueIdentifier>{7da29db9-85f3-4cdd-918a-85b74c263cc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Game Objects\Projectiles">
+      <UniqueIdentifier>{41e92d6b-e2ed-42db-9b3b-c5389642116a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Interface">
+      <UniqueIdentifier>{681525b4-ed69-4fc0-bd4e-5f70e9e83f6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Log System">
+      <UniqueIdentifier>{31f09719-3d86-46cc-94b2-35e76bf0879b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleOutput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Scoreboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemSlots.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SunSlots.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sunflower.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainBlock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Peashooter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Plant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SnowPea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Wallnut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CherryBomb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSession.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PeaProjectile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Zombie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SnowProjectile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NormalZombie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BucketHeadZombie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PoleVaultingZombie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperZombie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameObject.h">
+      <Filter>Resource Files\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleOutput.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleInput.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>Resource Files\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="SunSlots.h">
+      <Filter>Resource Files\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Scoreboard.h">
+      <Filter>Resource Files\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemSlots.h">
+      <Filter>Resource Files\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Resource Files\Log System</Filter>
+    </ClInclude>
+    <ClInclude Include="Plant.h">
+      <Filter>Resource Files\Game Objects\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="Sunflower.h">
+      <Filter>Resource Files\Game Objects\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainBlock.h">
+      <Filter>Resource Files\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Peashooter.h">
+      <Filter>Resource Files\Game Objects\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="SnowPea.h">
+      <Filter>Resource Files\Game Objects\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="Wallnut.h">
+      <Filter>Resource Files\Game Objects\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="CherryBomb.h">
+      <Filter>Resource Files\Game Objects\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSession.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PeaProjectile.h">
+      <Filter>Resource Files\Game Objects\Projectiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Zombie.h">
+      <Filter>Resource Files\Game Objects\Zombies</Filter>
+    </ClInclude>
+    <ClInclude Include="SnowProjectile.h">
+      <Filter>Resource Files\Game Objects\Projectiles</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalZombie.h">
+      <Filter>Resource Files\Game Objects\Zombies</Filter>
+    </ClInclude>
+    <ClInclude Include="BucketHeadZombie.h">
+      <Filter>Resource Files\Game Objects\Zombies</Filter>
+    </ClInclude>
+    <ClInclude Include="PoleVaultingZombie.h">
+      <Filter>Resource Files\Game Objects\Zombies</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperZombie.h">
+      <Filter>Resource Files\Game Objects\Zombies</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>

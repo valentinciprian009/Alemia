@@ -1,0 +1,8 @@
+Programul incepe prin a baga un nume.
+Este o eroare la soare, acesta poate fi apasat (dublu click) de cateva ori inainte sa aiba un bug (care nu percepe o eroare).
+Am aratat eroarea de mai multe ori la laborator dar nu s-a gasit rezolvare.
+De asemeanea, programul nu detecteaza dublu click-ul pt plante.
+Pentru a putea continua, am ales punerea unui peashooter direct pe harta pentru a dovedii faptul ca acesta trage proiectile la intalnirea unui zombie,
+ca il poate omora si ca dupa moartea acestuia mai apar alti zombie,selectia fiind Z si B (Zombie si BucketZombie)
+De asemenea, daca acesta ajunge la planta o mananca, insa este o eroare la continuarea drumului acestuia.
+In caz ca zombie vor ajunge la "casa", jocul se va incheia si va printa "AI PIERDUT".

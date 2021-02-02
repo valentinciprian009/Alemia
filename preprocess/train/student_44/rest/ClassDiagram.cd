@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Character" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAKAA=</HashCode>
+      <FileName>Character.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Game" Collapsed="true">
+    <Position X="20.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAgCAAAAAIBgAAIAEDAIAAAAiMAAAAEgAAAFCAIoA=</HashCode>
+      <FileName>Game.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IDrawable" Collapsed="true">
+    <Position X="7.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IDrawable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawableScene" Collapsed="true">
+    <Position X="11.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrawableScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawCircle" Collapsed="true">
+    <Position X="14" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAIAAAAAAAAAABAAAAAAABAAAAA=</HashCode>
+      <FileName>DrawCircle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawRectangle" Collapsed="true">
+    <Position X="9.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAIAAAAAAAEAAAAAAAAAABAACAA=</HashCode>
+      <FileName>DrawRectangle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawTriangle" Collapsed="true">
+    <Position X="11.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAASBAAAAA=</HashCode>
+      <FileName>DrawTriangle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawableCharacter" Collapsed="true">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrawableCharacter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawableZombie" Collapsed="true">
+    <Position X="2.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAIBAAAAA=</HashCode>
+      <FileName>DrawableZombie.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawablePlant" Collapsed="true">
+    <Position X="5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAABAAAAAAAAEAAAAAABAAAAA=</HashCode>
+      <FileName>DrawablePlant.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawableSun" Collapsed="true">
+    <Position X="7.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAIAAAAAAAAAAAAEAAAAABAAQAA=</HashCode>
+      <FileName>DrawableSun.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawableProiectil" Collapsed="true">
+    <Position X="0.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAgAgAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>DrawableProiectil.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jucator" Collapsed="true">
+    <Position X="22.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAQAAAAAAAAAIAAAAAAAGCACgEAAEAAAAAgA=</HashCode>
+      <FileName>Jucator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plant" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAERgAAAAAAAAAAAAgAAABAAAQAFAAAAAAAEAAEBAAA=</HashCode>
+      <FileName>Plant.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zombie" Collapsed="true">
+    <Position X="14.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAEAAAAAAAAAAAAAAAAQAFAAAAAAAEAAABABA=</HashCode>
+      <FileName>Zombie.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cherry_Bomb" Collapsed="true">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cherry_Bomb.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Peashooter" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Peashooter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Snow_Pea" Collapsed="true">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Snow_Pea.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sunflower" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sunflower.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wall_nut" Collapsed="true">
+    <Position X="9.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Wall_nut.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BucketHead_Zombie" Collapsed="true">
+    <Position X="16.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>BucketHead_Zombie.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PoleVaulting_Zombie" Collapsed="true">
+    <Position X="12" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>PoleVaulting_Zombie.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Super_Zombie" Collapsed="true">
+    <Position X="14.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Super_Zombie.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleField" Collapsed="true">
+    <Position X="19" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>BattleField.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Field" Collapsed="true">
+    <Position X="19" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAA=</HashCode>
+      <FileName>Field.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface::ConsoleInput" Collapsed="true">
+    <Position X="20.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAgAAAAAgiEAAAAAAAAAUAgQQAIAAIAAAAABA=</HashCode>
+      <FileName>ConsoleInput.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface::ConsoleOutput" Collapsed="true">
+    <Position X="22.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAhAAAAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>ConsoleOutput.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="tipCharacter" Collapsed="true">
+    <Position X="22.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAABAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Character.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tip_Planta" Collapsed="true">
+    <Position X="19" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAIAAIAAAEAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Plant.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tip_Zombie" Collapsed="true">
+    <Position X="20.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAQAAAAAgAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Zombie.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

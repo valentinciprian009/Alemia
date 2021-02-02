@@ -1,0 +1,2 @@
+s -a creat user
+s -a inceput jocul

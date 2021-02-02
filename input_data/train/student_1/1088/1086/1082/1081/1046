@@ -1,0 +1,5 @@
+﻿  Game.cpp
+  UserMenu.cpp
+  Generating Code...
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\Game.cpp(122): warning C4715: 'Game::user_menu': not all control paths return a value
+  poo_vs_zombies.vcxproj -> C:\Users\Asus\Desktop\poo_vs_zombies\x64\Debug\poo_vs_zombies.exe

@@ -1,0 +1,16 @@
+Done processing ./preprocess/train/student_37/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_37/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_37/sources/Logger.cpp
+Done processing ./preprocess/train/student_37/sources/Main.cpp
+Done processing ./preprocess/train/student_37/sources/Plant.cpp
+Done processing ./preprocess/train/student_37/sources/PlantCherryBomb.cpp
+Done processing ./preprocess/train/student_37/sources/PlantPeashooter.cpp
+Done processing ./preprocess/train/student_37/sources/PlantSunflower.cpp
+Done processing ./preprocess/train/student_37/sources/PlantWallnut.cpp
+Done processing ./preprocess/train/student_37/sources/Strategy.cpp
+Done processing ./preprocess/train/student_37/sources/StrategyBucketHead.cpp
+Done processing ./preprocess/train/student_37/sources/StrategyRegular.cpp
+Done processing ./preprocess/train/student_37/sources/Surface.cpp
+Done processing ./preprocess/train/student_37/sources/SurfaceContainer.cpp
+Done processing ./preprocess/train/student_37/sources/Zombie.cpp
+Total errors found: 991

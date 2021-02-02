@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="UserInterface::ConsoleOutput" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAhAAAIAAAEAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>ConsoleOutput.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameSession" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAIAAAAIAAAAAgMgIAAAABAAAQJAAAAAABQBAA=</HashCode>
+      <FileName>GameSession.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAIAIAAAAIAAAAAABEAGRABAAEA0REAJQ=</HashCode>
+      <FileName>Player.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface::ConsoleInput" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAgAAAIAgiAAAAAAAAAAEAgQQAIAAIAAAAABA=</HashCode>
+      <FileName>ConsoleInput.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemSlots" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAIAAAAAwAAhAAAABAAAQAAAAAAABAAAA=</HashCode>
+      <FileName>ItemSlots.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scoreboard" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAYAAAAAAAAEAAAALCAAYAAAAAAgAEAAg=</HashCode>
+      <FileName>Scoreboard.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SunSlots" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAEAAAAAAAIAAAAAAAAAAAAABAgAQgAAAQAACAAAA=</HashCode>
+      <FileName>SunSlots.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Terrain" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAoACAAQAEAGAAAABAQUSAgEAAAEAAQAA=</HashCode>
+      <FileName>Terrain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerrainBlock" Collapsed="true">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAQAAIAAAAAAAAAAAAAAAAAEABAAAA=</HashCode>
+      <FileName>TerrainBlock.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObject" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAgAAQAAIGAAAAAAAAAAAAAABgEGBAAAA=</HashCode>
+      <FileName>GameObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zombie" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAQAAIAIAAAAACAAAAAAAAAEAlYABg=</HashCode>
+      <FileName>Zombie.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperZombie" Collapsed="true">
+    <Position X="10.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAIAAAAAAAAAAAAAAAAAEABAAAA=</HashCode>
+      <FileName>SuperZombie.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PoleVaultingZombie" Collapsed="true">
+    <Position X="9.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAIQAAAAAAAAAAABAAAAEABAAAA=</HashCode>
+      <FileName>PoleVaultingZombie.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NormalZombie" Collapsed="true">
+    <Position X="7.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAQAAIAAAAAAAAAAAAAAAAAEABAAAA=</HashCode>
+      <FileName>NormalZombie.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BucketHeadZombie" Collapsed="true">
+    <Position X="11.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAIAAAAAAAAAAAAAAAABEABAAAA=</HashCode>
+      <FileName>BucketHeadZombie.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SnowProjectile" Collapsed="true">
+    <Position X="17.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>SnowProjectile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PeaProjectile" Collapsed="true">
+    <Position X="15.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>PeaProjectile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CherryBomb" Collapsed="true">
+    <Position X="19" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAIAABAAAAAAAAAAAAAEAABAAAA=</HashCode>
+      <FileName>CherryBomb.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Peashooter" Collapsed="true">
+    <Position X="15.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAQgAIAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Peashooter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plant" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAiAgQAgIAARAAAAAAAAAAQAAAEAFQAAA=</HashCode>
+      <FileName>Plant.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SnowPea" Collapsed="true">
+    <Position X="17.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAQAAIAAAAAAAAAAAAAAAAAAABAAAI=</HashCode>
+      <FileName>SnowPea.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sunflower" Collapsed="true">
+    <Position X="13.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAQAAIgAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Sunflower.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wallnut" Collapsed="true">
+    <Position X="20.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAQAAIAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Wallnut.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

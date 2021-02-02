@@ -1,0 +1,21 @@
+Done processing ./preprocess/train/student_13/sources/BattleField.cpp
+Done processing ./preprocess/train/student_13/sources/Cherrybomb.cpp
+Done processing ./preprocess/train/student_13/sources/Click.cpp
+Done processing ./preprocess/train/student_13/sources/Combat.cpp
+Done processing ./preprocess/train/student_13/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_13/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_13/sources/Entity.cpp
+Done processing ./preprocess/train/student_13/sources/ExceptionHandler.cpp
+Done processing ./preprocess/train/student_13/sources/Field.cpp
+Done processing ./preprocess/train/student_13/sources/Frozen_Peashooter.cpp
+Done processing ./preprocess/train/student_13/sources/Peashooter.cpp
+Done processing ./preprocess/train/student_13/sources/Plant.cpp
+Done processing ./preprocess/train/student_13/sources/PlantsField.cpp
+Done processing ./preprocess/train/student_13/sources/Player.cpp
+Done processing ./preprocess/train/student_13/sources/Potato.cpp
+Done processing ./preprocess/train/student_13/sources/Source.cpp
+Done processing ./preprocess/train/student_13/sources/SunField.cpp
+Done processing ./preprocess/train/student_13/sources/Sunflower.cpp
+Done processing ./preprocess/train/student_13/sources/Zombie.cpp
+Done processing ./preprocess/train/student_13/sources/Zombies.cpp
+Total errors found: 1377

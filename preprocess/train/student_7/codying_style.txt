@@ -1,0 +1,12 @@
+Done processing ./preprocess/train/student_7/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_7/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_7/sources/Entity.cpp
+Done processing ./preprocess/train/student_7/sources/Game.cpp
+Done processing ./preprocess/train/student_7/sources/IDrawable.cpp
+Done processing ./preprocess/train/student_7/sources/LoginInterface.cpp
+Done processing ./preprocess/train/student_7/sources/Pea.cpp
+Done processing ./preprocess/train/student_7/sources/PeaShooter.cpp
+Done processing ./preprocess/train/student_7/sources/Source.cpp
+Done processing ./preprocess/train/student_7/sources/Sun.cpp
+Done processing ./preprocess/train/student_7/sources/Zombie.cpp
+Total errors found: 839

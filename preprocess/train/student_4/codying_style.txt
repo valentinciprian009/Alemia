@@ -1,0 +1,18 @@
+Done processing ./preprocess/train/student_4/sources/BucketHead_Zombie.cpp
+Done processing ./preprocess/train/student_4/sources/CherryBomb.cpp
+Done processing ./preprocess/train/student_4/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_4/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_4/sources/Game.cpp
+Done processing ./preprocess/train/student_4/sources/PeaShooter.cpp
+Done processing ./preprocess/train/student_4/sources/Plant.cpp
+Done processing ./preprocess/train/student_4/sources/PoleVaulting_Zombie.cpp
+Done processing ./preprocess/train/student_4/sources/Score.cpp
+Done processing ./preprocess/train/student_4/sources/SnowPea.cpp
+Done processing ./preprocess/train/student_4/sources/Source.cpp
+Done processing ./preprocess/train/student_4/sources/Sun.cpp
+Done processing ./preprocess/train/student_4/sources/SunFLower.cpp
+Done processing ./preprocess/train/student_4/sources/Teren.cpp
+Done processing ./preprocess/train/student_4/sources/Wall_nut.cpp
+Done processing ./preprocess/train/student_4/sources/Zombi.cpp
+Done processing ./preprocess/train/student_4/sources/Zombie.cpp
+Total errors found: 878

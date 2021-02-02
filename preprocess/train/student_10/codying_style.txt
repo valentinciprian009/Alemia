@@ -1,0 +1,8 @@
+Done processing ./preprocess/train/student_10/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_10/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_10/sources/Element.cpp
+Done processing ./preprocess/train/student_10/sources/Exceptie.cpp
+Done processing ./preprocess/train/student_10/sources/Joc.cpp
+Done processing ./preprocess/train/student_10/sources/Jucator.cpp
+Done processing ./preprocess/train/student_10/sources/Main.cpp
+Total errors found: 652

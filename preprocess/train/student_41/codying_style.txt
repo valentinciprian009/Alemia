@@ -1,0 +1,21 @@
+Done processing ./preprocess/train/student_41/sources/BHeadZombie.cpp
+Done processing ./preprocess/train/student_41/sources/Board.cpp
+Done processing ./preprocess/train/student_41/sources/Bullet.cpp
+Done processing ./preprocess/train/student_41/sources/CherryBomb.cpp
+Done processing ./preprocess/train/student_41/sources/ClasicZombie.cpp
+Done processing ./preprocess/train/student_41/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_41/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_41/sources/Drowable.cpp
+Done processing ./preprocess/train/student_41/sources/GameEngine.cpp
+Done processing ./preprocess/train/student_41/sources/PVZombie.cpp
+Done processing ./preprocess/train/student_41/sources/Peashooter.cpp
+Done processing ./preprocess/train/student_41/sources/Plant.cpp
+Done processing ./preprocess/train/student_41/sources/Resources.cpp
+Done processing ./preprocess/train/student_41/sources/SnowPea.cpp
+Done processing ./preprocess/train/student_41/sources/Sun.cpp
+Done processing ./preprocess/train/student_41/sources/SunFlower.cpp
+Done processing ./preprocess/train/student_41/sources/Tema_VOICU.cpp
+Done processing ./preprocess/train/student_41/sources/WallNut.cpp
+Done processing ./preprocess/train/student_41/sources/Zombie.cpp
+Done processing ./preprocess/train/student_41/sources/iDrowable.cpp
+Total errors found: 541

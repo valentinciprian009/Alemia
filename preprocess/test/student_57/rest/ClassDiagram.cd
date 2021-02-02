@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="UserInterface::ConsoleInput" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACCAAAAAAAgiAAAAAAAAAAUAgQQAIAAIAAAAABA=</HashCode>
+      <FileName>ConsoleInput.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface::ConsoleOutput" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAABAAAAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>ConsoleOutput.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Game" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIMRBAGAgAAAQBEQSAgFRAAIBAGAAEoAAAAEAEAAEAA=</HashCode>
+      <FileName>Game.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plants" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAEEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Plants.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlantsCherryBomb" Collapsed="true">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACABAAEEEAAAAAAAAAAAAAAAAAAQAAQIAAAAAAAAAAA=</HashCode>
+      <FileName>PlantsCherryBomb.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlantsPeaShooter" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACCBAAEGEAAABAEAAQoAAAAQEAEQAgAIAAAAAIAEAAA=</HashCode>
+      <FileName>PlantsPeaShooter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlantsSnowPea" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACABAAEEGAAAAAAAAAAAAAAAAAAQAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>PlantsSnowPea.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlantsSunFlower" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACABAAEEEAAAAAAAAAAAAAAAAEAQAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>PlantsSunFlower.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlantsWallNut" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACABAAFEEAAAAAAAAAAAAAAAAAAQAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>PlantsWallNut.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAEAAAAAAAAgAAQAIAAAABAAGAACAAAAAAQAAAAA=</HashCode>
+      <FileName>Player.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayersList" Collapsed="true">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIIAAAAAAAAIAAAABAAARAABAAAAAAAUA=</HashCode>
+      <FileName>PlayersList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proiectil" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Proiectil.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProiectilFrozenPEA" Collapsed="true">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProiectilFrozenPEA.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProiectilPEA" Collapsed="true">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAgASQAAAAAAAAAAAgAREAAABgAAAAAAA=</HashCode>
+      <FileName>ProiectilPEA.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Resursa" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Resursa.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Runda" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAECAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Runda.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Soare" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAIAAAAACAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Soare.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Teren" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIBAAAAABAAAAAAAAAAAAQIIAAAAAAAAEAACAA=</HashCode>
+      <FileName>Teren.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zombie" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAACAAAAAAAAAAAAAAIQBAAAAAAAAAAA=</HashCode>
+      <FileName>Zombie.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZombieBucketHead" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ZombieBucketHead.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZombieSimple" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAICCAAAgAACAAgAAAAAQABAgAZQBgAAAAAAAQAg=</HashCode>
+      <FileName>ZombieSimple.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

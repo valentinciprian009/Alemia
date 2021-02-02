@@ -1,0 +1,52 @@
+/* MAI SIMPLU */
+2 //number of waves
+
+4 //spread
+1 0 0 0
+1 0 0 0
+2 0 0 0
+1 0 0 0
+1 0 0 0
+
+6
+2 0 0 0
+3 0 0 0
+4 0 0 0
+2 0 0 0
+3 0 0 0
+
+
+
+
+
+
+
+/* PREA COMPLICAT */
+2 //numbers of waves
+
+0 zombie
+1 bucket zombie
+2 pole zombie
+3 super zombie
+
+ex: 3 zombies, 1 bucket zombie = 13
+    2 pole zombies, 5 zombies  = 205
+
+miniwave duration
+dispenser interval
+
+//0th wave duration
+5
+0 0 0 0 0
+0 0 1 1 2
+1 1 1 2 2
+0 0 1 1 2
+0 0 0 0 0
+
+//1st wave duration
+3
+1 2
+1 2
+1 3
+1 2
+1 1

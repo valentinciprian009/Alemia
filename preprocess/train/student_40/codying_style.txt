@@ -1,0 +1,27 @@
+Done processing ./preprocess/train/student_40/sources/BattleField.cpp
+Done processing ./preprocess/train/student_40/sources/BucketHeadZombie.cpp
+Done processing ./preprocess/train/student_40/sources/CherryBomb.cpp
+Done processing ./preprocess/train/student_40/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_40/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_40/sources/DisplayableEntity.cpp
+Done processing ./preprocess/train/student_40/sources/Exception.cpp
+Done processing ./preprocess/train/student_40/sources/Main.cpp
+Done processing ./preprocess/train/student_40/sources/NormalZombie.cpp
+Done processing ./preprocess/train/student_40/sources/Pea.cpp
+Done processing ./preprocess/train/student_40/sources/PeaShooter.cpp
+Done processing ./preprocess/train/student_40/sources/Plant.cpp
+Done processing ./preprocess/train/student_40/sources/Player.cpp
+Done processing ./preprocess/train/student_40/sources/PoleVaultingZombie.cpp
+Done processing ./preprocess/train/student_40/sources/Projectile.cpp
+Done processing ./preprocess/train/student_40/sources/Resource.cpp
+Done processing ./preprocess/train/student_40/sources/ResourceFactory.cpp
+Done processing ./preprocess/train/student_40/sources/ShootingPlant.cpp
+Done processing ./preprocess/train/student_40/sources/SnowPea.cpp
+Done processing ./preprocess/train/student_40/sources/SnowPeaShooter.cpp
+Done processing ./preprocess/train/student_40/sources/Sun.cpp
+Done processing ./preprocess/train/student_40/sources/SunFlower.cpp
+Done processing ./preprocess/train/student_40/sources/SuperZombie.cpp
+Done processing ./preprocess/train/student_40/sources/WallNut.cpp
+Done processing ./preprocess/train/student_40/sources/Zombie.cpp
+Done processing ./preprocess/train/student_40/sources/ZombieFactory.cpp
+Total errors found: 1284

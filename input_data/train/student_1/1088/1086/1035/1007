@@ -1,0 +1,76 @@
+﻿  BucketHead.cpp
+  CherryBomb.cpp
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\CherryBomb.cpp(13,15): warning C4244: 'initializing': conversion from '_Rep' to 'int', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+  ConsoleEvent.cpp
+  ConsoleInput.cpp
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\ConsoleInput.cpp(116,6): warning C4101: 'x': unreferenced local variable
+  ConsoleOutput.cpp
+  Game.cpp
+  Garden.cpp
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\SnowPea.h(13,12): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\SnowPea.h(14,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\Garden.cpp(33,6): warning C4101: 'row': unreferenced local variable
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\Garden.cpp(33,11): warning C4101: 'col': unreferenced local variable
+  Ground.cpp
+  GroundCell.cpp
+  GroundRow.cpp
+  Main.cpp
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\SnowPea.h(13,12): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\SnowPea.h(14,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\Main.cpp(6,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Pea.cpp
+  Peashooter.cpp
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\Peashooter.cpp(14,15): warning C4244: 'initializing': conversion from '_Rep' to 'int', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+  PoleVaulting.cpp
+  ScoreBoard.cpp
+  ScoreTable.cpp
+  SnowPea.cpp
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\SnowPea.h(13,12): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\SnowPea.h(14,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\SnowPea.cpp(14,15): warning C4244: 'initializing': conversion from '_Rep' to 'int', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+  SpawnGround.cpp
+  Sunflower.cpp
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\Sunflower.cpp(14,15): warning C4244: 'initializing': conversion from '_Rep' to 'int', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\Sunflower.cpp(49,35): warning C4305: 'argument': truncation from 'double' to 'float'
+  SunGround.cpp
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\SunGround.cpp(13,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\SunGround.cpp(36,20): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\Game.cpp(122): warning C4715: 'Game::user_menu': not all control paths return a value
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\ConsoleOutput.cpp(75): warning C4715: 'UserInterface::ConsoleOutput::operator()': not all control paths return a value
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\ConsoleInput.cpp(191): warning C4715: 'UserInterface::ConsoleInput::operator()': not all control paths return a value
+  Compiling...
+  SuperZombie.cpp
+  User.cpp
+  UserInterface.cpp
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\UserInterface.cpp(92,23): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\UserInterface.cpp(92,38): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\UserInterface.cpp(100,223): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\UserInterface.cpp(135,4): warning C4552: '!': result of expression not used
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\UserInterface.cpp(141,4): warning C4552: '!': result of expression not used
+  UserMenu.cpp
+  WallNut.cpp
+C:\Users\Asus\Desktop\poo_vs_zombies\poo_vs_zombies\WallNut.cpp(13,15): warning C4244: 'initializing': conversion from '_Rep' to 'int', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+  Zombie.cpp
+  Generating Code...
+  poo_vs_zombies.vcxproj -> C:\Users\Asus\Desktop\poo_vs_zombies\Debug\poo_vs_zombies.exe

@@ -1,0 +1,15 @@
+Done processing ./preprocess/train/student_67/sources/BanalZombie.cpp
+Done processing ./preprocess/train/student_67/sources/BucketHead_Zombie.cpp
+Done processing ./preprocess/train/student_67/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_67/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_67/sources/Game.cpp
+Done processing ./preprocess/train/student_67/sources/Main.cpp
+Done processing ./preprocess/train/student_67/sources/Peashooter.cpp
+Done processing ./preprocess/train/student_67/sources/PieceOnTable.cpp
+Done processing ./preprocess/train/student_67/sources/Plant.cpp
+Done processing ./preprocess/train/student_67/sources/Player.cpp
+Done processing ./preprocess/train/student_67/sources/Projectile.cpp
+Done processing ./preprocess/train/student_67/sources/Sun.cpp
+Done processing ./preprocess/train/student_67/sources/SunFlower.cpp
+Done processing ./preprocess/train/student_67/sources/Zombie.cpp
+Total errors found: 2571
