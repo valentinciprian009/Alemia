@@ -1,6 +1,0 @@
-l.txt		Sun Jan 19 20:24:28 2020
-
-l.txt		Sun Jan 19 20:26:02 2020
-
-l.txt		Sun Jan 19 20:29:35 2020
-

@@ -1,5 +1,0 @@
-Utilizator: 
-1.Creaza utilizator
-2.Shimba utilizatorul
-3.Incepe jocul
-4.Iesire

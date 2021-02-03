@@ -44,16 +44,20 @@ def get_regex_counts(filename,regex_pattern):
 
 def create_csv(trainDir,outfilename):
     output = open(outfilename,"w")
-    output.write("Nr.crt;Label;Nr.Clase;Nr.Error;Nr.Inheritance;Nr.Virtual;Nr.Static;Nr.Global;Nr.Public;Nr.Private;Nr.Prodected;Nr.Define;\n")
+    output.write("nr_crt,label,nr_Clase,nr_errors,nr_inheritance,nr_virtual,nr_static,")
+    output.write("nr_global,nr_public,nr_private,nr_prodected,nr_define,nr_template,")
+    output.write("nr_stl,nr_namespace,nr_enum,nr_struct,total_size,\n")
     nrCrt=0
     for std in students:
        
         local_dir = trainDir+std
         headers = [h for h in os.listdir(local_dir +"/headers/") if os.path.isfile(os.path.join(local_dir+"/headers/", h))]
-        sources = [s for s in os.listdir(local_dir+"/sources/") if os.path.isdir(os.path.join(local_dir+"/sources/", s))]
-        texts = [t for t in os.listdir(local_dir+"/text/") if os.path.isdir(os.path.join(local_dir+"/text/", t))]
+        sources = [s for s in os.listdir(local_dir+"/sources/") if os.path.isfile(os.path.join(local_dir+"/sources/", s))]
+        texts = [t for t in os.listdir(local_dir+"/text/") if os.path.isfile(os.path.join(local_dir+"/text/", t))]
 
         class_number = len(headers)
+        total_size = class_number + len(sources) + len(texts)
+        
         if not(os.path.isfile(trainDir+std+"/codying_style.txt")):
             command = "cpplint "+local_dir+"/sources/* >"+trainDir+std+"/codying_style.txt"
             os.system(command)
@@ -66,13 +70,20 @@ def create_csv(trainDir,outfilename):
         #REGEX 
         inheritance_pattern = re.compile("([A-Z])\w+ : ([a-z]\w+)")
         virtual_pattern = re.compile("virtual ([a-z]\w+)")
-        static_pattern =  re.compile("static*")
-        global_pattern =  re.compile("global*")
-        public_pattern = re.compile("public*")
-        private_pattern = re.compile("private*")
-        protected_pattern = re.compile("protected*")
+        static_pattern =  re.compile("\W*(static)\W*")
+        global_pattern =  re.compile("\W*(global)\W*")
+        public_pattern = re.compile("\W*(public)\W*")
+        private_pattern = re.compile("\W*(private)\W*")
+        protected_pattern = re.compile("\W*(protected)\W*")
         define_pattern = re.compile("^#define*")
-        
+
+        template_pattern = re.compile("\W*(template)\W*")
+        stl_pattern = re.compile("\W*(std)\W*")
+        namespace_pattern = re.compile("\W*(namespace)\W*")
+        comments_pattern = re.compile("\W*(//)\W*")
+        enum_pattern = re.compile("\W*(enum)\W*")
+        struct_pattern = re.compile("W*(stuct)\W*")
+
         inheritance_count = 0
         virtual_count = 0
         static_count = 0
@@ -81,6 +92,14 @@ def create_csv(trainDir,outfilename):
         private_count = 0
         protected = 0
         define_count = 0
+
+        template_count = 0
+        stl_count = 0
+        namespace_count = 0
+        comments_count = 0
+        enum_count = 0
+        struct_count = 0
+
         for header in headers:
 
             inheritance_count += get_regex_counts(local_dir+"/headers/"+header,inheritance_pattern)
@@ -91,6 +110,12 @@ def create_csv(trainDir,outfilename):
             private_count += get_regex_counts(local_dir+"/headers/"+header,private_pattern)
             protected += get_regex_counts(local_dir+"/headers/"+header, protected_pattern )
             define_count += get_regex_counts(local_dir+"/headers/"+header,define_pattern)
+            template_count += get_regex_counts(local_dir+"/headers/"+header,template_pattern)
+            stl_count += get_regex_counts(local_dir+"/headers/"+header,struct_pattern)
+            namespace_count += get_regex_counts(local_dir+"/headers/"+header,namespace_pattern)
+            comments_count += get_regex_counts(local_dir+"/headers/"+header,comments_pattern)
+            enum_count += get_regex_counts(local_dir+"/headers/"+header,enum_pattern)
+            struct_count += get_regex_counts(local_dir+"/headers/"+header,struct_pattern)
 
         to_Write= []
         to_Write.append(nrCrt)
@@ -105,9 +130,15 @@ def create_csv(trainDir,outfilename):
         to_Write.append(private_count)
         to_Write.append(protected)
         to_Write.append(define_count)
+        to_Write.append(template_count)
+        to_Write.append(stl_count)
+        to_Write.append(namespace_count)
+        to_Write.append(enum_count)
+        to_Write.append(struct_count)
+        to_Write.append(total_size)
            
         for w in to_Write:
-            output.write(str(w)+";")
+            output.write(str(w)+",")
         output.write("\n")
         nrCrt+=1
     output.close()
@@ -120,10 +151,10 @@ create_dir(trainDir)
 create_dir(testDir)
 
 preprocess_datas("./input_data/train/", trainDir)
-preprocess_datas("./input_data/train/", testDir)
+preprocess_datas("./input_data/test/", testDir)
 
 
 students = [d for d in os.listdir(trainDir) if os.path.isdir(os.path.join(trainDir, d))]
 create_csv(trainDir,"./train.csv")
 
-#print(get_regex_counts("./preprocess/train/student_1/headers/BucketHead.h",re.compile("class*")))     
+#print(get_regex_counts("./test.txt",re.compile("\W*(//)\W*")))    
