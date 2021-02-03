@@ -3,36 +3,44 @@ import glob
 import shutil
 import re
 import zipfile
+import fnmatch
 
 def create_dir(path):
     if not(os.path.isdir(path)):
         os.mkdir(path)
 
 def preprocess_datas(src_dir, dest_dir):
-    dir = os.listdir(dest_dir)
-    if(len(dir)!=0):
-        print("[INFO] "+ dest_dir+" already exist")
-        return
-
+    newfiles=[]
+    dest_fields = dest_dir.split("/")
     for filename in glob.iglob(src_dir + '**/*.*', recursive=True):
         fields = filename.split("/")
-        create_dir(dest_dir+"/"+fields[3])    
-        create_dir(dest_dir+"/"+fields[3]+"/text")    
-        create_dir(dest_dir+"/"+fields[3]+"/headers")    
-        create_dir(dest_dir+"/"+fields[3]+"/sources")    
-        create_dir(dest_dir+"/"+fields[3]+"/rest")
+        my_dir =""
+        for i in range(len(fields)):
+            if fields[i]==dest_fields[3]:
+                my_dir = fields[i+1]
+        
+        if all(x not in my_dir for x in newfiles):
+            newfiles.append(my_dir)
+
+        create_dir(dest_dir+"/"+my_dir)    
+        create_dir(dest_dir+"/"+my_dir+"/text")    
+        create_dir(dest_dir+"/"+my_dir+"/headers")    
+        create_dir(dest_dir+"/"+my_dir+"/sources")    
+        create_dir(dest_dir+"/"+my_dir+"/rest")
         extention = fields[-1].split(".")
         
+
         if(filename.endswith(".txt")):
-            shutil.copy2(filename,dest_dir+fields[3]+"/text/"+fields[-1])
+            shutil.copy2(filename,dest_dir+my_dir+"/text/"+fields[-1])
         else:
             if(filename.endswith(".h")):
-                shutil.copy2(filename,dest_dir+fields[3]+"/headers/"+fields[-1])
+                shutil.copy2(filename,dest_dir+my_dir+"/headers/"+fields[-1])
             else:
                 if(filename.endswith(".cpp")):
-                    shutil.copy2(filename,dest_dir+fields[3]+"/sources/"+fields[-1])
+                    shutil.copy2(filename,dest_dir+my_dir+"/sources/"+fields[-1])
                 else:
-                    shutil.copy2(filename,dest_dir+fields[3]+"/rest/"+fields[-1])
+                    shutil.copy2(filename,dest_dir+my_dir+"/rest/"+fields[-1])
+    return newfiles
 
 def get_regex_counts(filename,regex_pattern):
     counts=0
@@ -42,8 +50,7 @@ def get_regex_counts(filename,regex_pattern):
             counts+=1
     return counts
 
-
-def create_csv(trainDir,outfilename):
+def create_csv(trainDir,outfilename, students):
     output = open(outfilename,"w")
     output.write("nr_crt,label,nr_Clase,nr_errors,nr_inheritance,nr_virtual,nr_static,")
     output.write("nr_global,nr_public,nr_private,nr_protected,nr_define,nr_template,")
@@ -51,8 +58,9 @@ def create_csv(trainDir,outfilename):
     #
     output.write("nr_comments,nr_function,headers_size,sources_size,\n")
     nrCrt=0
+    print(students)
     for std in students:
-       
+        print("here")
         local_dir = trainDir+std
         headers = [h for h in os.listdir(local_dir +"/headers/") if os.path.isfile(os.path.join(local_dir+"/headers/", h))]
         sources = [s for s in os.listdir(local_dir+"/sources/") if os.path.isfile(os.path.join(local_dir+"/sources/", s))]
@@ -172,21 +180,49 @@ def extract_zip(zipPath, destPath, scope):
         else:
             print("[INFO] "+scope + " dataset exists")
 
-# extract_zip("./archives/train.zip","./data/raw/", "train")
-# extract_zip("./archives/test.zip","./data/raw/", "test")
+def merge_csv(src, dest):
+    file1 = open(dest,"r+")
+    file2 = open(src, "r")
+    Lines = file1.readlines()
+    last_line = Lines[-1]
+    last_index = last_line.split(',')[0]
 
-trainDir = "./data/preprocessed/train/"
-testDir = "./data/preprocessed/test/"
-create_dir(trainDir)
-create_dir(testDir)
+    Lines2 = file2.readlines()
+    for line in Lines2[1:]:
+        fields = line.split(",")
+        nr_crt = int(fields[0])+int(last_index)+1
+        file1.write(str(nr_crt)+",")
+        for f in fields[1:len(fields)-1]:
+            file1.write(f+",")
+        file1.write("\n")
 
-preprocess_datas("./data/raw/train/", trainDir)
-preprocess_datas("./data/raw/test/", testDir)
+def init_setup():
+    create_dir("./data/preprocessed/")
+    trainDir = "./data/preprocessed/train/"
+    testDir = "./data/preprocessed/test/"
+    create_dir(trainDir)
+    create_dir(testDir)
 
+    preprocess_datas("./data/raw/train/", trainDir)
+    preprocess_datas("./data/raw/test/", testDir)
+    students = [d for d in os.listdir(trainDir) if os.path.isdir(os.path.join(trainDir, d))]
+    create_csv(trainDir,"./data/features.csv",students)
 
-students = [d for d in os.listdir(trainDir) if os.path.isdir(os.path.join(trainDir, d))]
-create_csv(trainDir,"./data/features.csv")
+def retrain_data(path_to_file): 
+    trainDir = "./data/preprocessed/train/"
+    newFiles = preprocess_datas(path_to_file, trainDir)
+   
+    students = [d for d in os.listdir(trainDir) if os.path.isdir(os.path.join(trainDir, d))]
+    newStd = []
+    for new in newFiles:
+        for std in students:
+            if(std == new):
+                newStd.append(std)
+        
+    
+    create_csv(trainDir,"./data/featuresRetrained.csv",newStd)
+    merge_csv("./data/featuresRetrained.csv","./data/features.csv")
 
-#print(get_regex_counts("./test.txt",re.compile("\W*(\(\))\W*")))    
-#print(os.path.getsize("./test.txt"))
+#init_setup()
+#retrain_data("./test/")
 
