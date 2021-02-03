@@ -9,6 +9,8 @@ import {
 import axios from "axios"
 import "./stylesheets/App.css"
 
+const API_BASE_ADDRESS = "http://127.0.0.1:3001"
+
 class App extends React.Component{
 
     default_state = {
@@ -40,7 +42,7 @@ class App extends React.Component{
 
         form_data.append("file", event.target.files[0])
 
-        axios.post("http://127.0.0.1:3001/predict", form_data, {
+        axios.post(API_BASE_ADDRESS + "/predict", form_data, {
             headers: {
                 "Access-Control-Allow-Origin": "*",
                 "Content-Type": "multipart/form-data"
@@ -62,7 +64,7 @@ class App extends React.Component{
     }
 
     sendChangeRequest(){
-        axios.get("http://127.0.0.1:3001/adjust_grade", {
+        axios.get(API_BASE_ADDRESS + "/adjust_grade", {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             },
@@ -73,7 +75,7 @@ class App extends React.Component{
     }
 
     retrainModel(){
-        axios.get("http://127.0.0.1:3001/retrain_model", {
+        axios.get(API_BASE_ADDRESS + "/retrain_model", {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }

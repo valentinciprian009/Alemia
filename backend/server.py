@@ -3,6 +3,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from Crypto.Hash import MD5
+import zipfile
 import os
 import time
 
@@ -11,6 +12,7 @@ CORS(app)
 
 
 DOWNLOAD_DIRECTORY = "uploads"
+EXTRACTION_DIRECTORY = "../data/raw/train"
 
 
 # Default route
@@ -27,12 +29,16 @@ def predict_route():
     uploaded_file = request.files["file"]
 
     # Generate a filename and save the file locally
-    sanitized_filename = uploaded_file.filename + str(time.time())
-    sanitized_filename = MD5.new(sanitized_filename.encode("utf-8")).hexdigest()
-    sanitized_filename += ".zip"
-    uploaded_file.save(os.path.join(DOWNLOAD_DIRECTORY, sanitized_filename))
+    unique_filename = uploaded_file.filename + str(time.time())
+    unique_filename = MD5.new(unique_filename.encode("utf-8")).hexdigest()
+    full_path = os.path.join(DOWNLOAD_DIRECTORY, unique_filename + ".zip")
+    uploaded_file.save(full_path)
 
-    #TODO: Extract the uploaded archive
+    # Extract the uploaded archive
+    extraction_full_path = os.path.join(EXTRACTION_DIRECTORY, unique_filename)
+    os.makedirs(extraction_full_path)
+    with zipfile.ZipFile(full_path, "r") as zip_file:
+        zip_file.extractall(extraction_full_path)
 
     # Return a result
     result = {"predicted_grade": 10}
