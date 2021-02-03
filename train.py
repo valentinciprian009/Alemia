@@ -2,6 +2,7 @@ import os
 import glob
 import shutil
 import re
+import zipfile
 
 def create_dir(path):
     if not(os.path.isdir(path)):
@@ -10,7 +11,7 @@ def create_dir(path):
 def preprocess_datas(src_dir, dest_dir):
     dir = os.listdir(dest_dir)
     if(len(dir)!=0):
-        print("Files already exist")
+        print("[INFO] "+ dest_dir+" already exist")
         return
 
     for filename in glob.iglob(src_dir + '**/*.*', recursive=True):
@@ -45,8 +46,10 @@ def get_regex_counts(filename,regex_pattern):
 def create_csv(trainDir,outfilename):
     output = open(outfilename,"w")
     output.write("nr_crt,label,nr_Clase,nr_errors,nr_inheritance,nr_virtual,nr_static,")
-    output.write("nr_global,nr_public,nr_private,nr_prodected,nr_define,nr_template,")
-    output.write("nr_stl,nr_namespace,nr_enum,nr_struct,total_size,\n")
+    output.write("nr_global,nr_public,nr_private,nr_protected,nr_define,nr_template,")
+    output.write("nr_stl,nr_namespace,nr_enum,nr_struct,nr_cpp,")
+    #
+    output.write("nr_comments,nr_function,headers_size,sources_size,\n")
     nrCrt=0
     for std in students:
        
@@ -56,8 +59,8 @@ def create_csv(trainDir,outfilename):
         texts = [t for t in os.listdir(local_dir+"/text/") if os.path.isfile(os.path.join(local_dir+"/text/", t))]
 
         class_number = len(headers)
-        total_size = class_number + len(sources) + len(texts)
-        
+        sources_number =len(sources)
+       
         if not(os.path.isfile(trainDir+std+"/codying_style.txt")):
             command = "cpplint "+local_dir+"/sources/* >"+trainDir+std+"/codying_style.txt"
             os.system(command)
@@ -80,9 +83,12 @@ def create_csv(trainDir,outfilename):
         template_pattern = re.compile("\W*(template)\W*")
         stl_pattern = re.compile("\W*(std)\W*")
         namespace_pattern = re.compile("\W*(namespace)\W*")
-        comments_pattern = re.compile("\W*(//)\W*")
+        comments_pattern = re.compile("\W*(/\*)|(//)\W*")
         enum_pattern = re.compile("\W*(enum)\W*")
         struct_pattern = re.compile("W*(stuct)\W*")
+
+        #
+        function_pattern = re.compile("\W*(\(\))\W*")
 
         inheritance_count = 0
         virtual_count = 0
@@ -99,6 +105,13 @@ def create_csv(trainDir,outfilename):
         comments_count = 0
         enum_count = 0
         struct_count = 0
+        function_count = 0
+        
+        #size
+        sources_size = 0
+        headers_size = 0
+        for source in sources:
+            sources_size+=os.path.getsize(local_dir+"/sources/"+source)
 
         for header in headers:
 
@@ -111,11 +124,14 @@ def create_csv(trainDir,outfilename):
             protected += get_regex_counts(local_dir+"/headers/"+header, protected_pattern )
             define_count += get_regex_counts(local_dir+"/headers/"+header,define_pattern)
             template_count += get_regex_counts(local_dir+"/headers/"+header,template_pattern)
-            stl_count += get_regex_counts(local_dir+"/headers/"+header,struct_pattern)
+            stl_count += get_regex_counts(local_dir+"/headers/"+header,stl_pattern)
             namespace_count += get_regex_counts(local_dir+"/headers/"+header,namespace_pattern)
             comments_count += get_regex_counts(local_dir+"/headers/"+header,comments_pattern)
             enum_count += get_regex_counts(local_dir+"/headers/"+header,enum_pattern)
             struct_count += get_regex_counts(local_dir+"/headers/"+header,struct_pattern)
+
+            function_count+= get_regex_counts(local_dir+"/headers/"+header,function_pattern)
+            headers_size+=os.path.getsize(local_dir+"/headers/"+header)
 
         to_Write= []
         to_Write.append(nrCrt)
@@ -135,7 +151,14 @@ def create_csv(trainDir,outfilename):
         to_Write.append(namespace_count)
         to_Write.append(enum_count)
         to_Write.append(struct_count)
-        to_Write.append(total_size)
+        to_Write.append(sources_number)
+
+        #New Add
+        to_Write.append(comments_count)
+        to_Write.append(function_count)
+        to_Write.append(headers_size)
+        to_Write.append(sources_size)
+
            
         for w in to_Write:
             output.write(str(w)+",")
@@ -143,7 +166,15 @@ def create_csv(trainDir,outfilename):
         nrCrt+=1
     output.close()
     
+def extract_zip(zipPath, destPath, scope):
+    with zipfile.ZipFile(zipPath, 'r') as zip_ref:
+        if not(os.path.isdir(destPath+scope)):
+            zip_ref.extractall(destPath)
+        else:
+            print("[INFO] "+scope + " dataset exists")
 
+extract_zip("./archives/train.zip","./input_data/", "train")
+extract_zip("./archives/test.zip","./input_data/", "test")
 
 trainDir = "./preprocess/train/"
 testDir = "./preprocess/test/"
@@ -157,4 +188,6 @@ preprocess_datas("./input_data/test/", testDir)
 students = [d for d in os.listdir(trainDir) if os.path.isdir(os.path.join(trainDir, d))]
 create_csv(trainDir,"./train.csv")
 
-#print(get_regex_counts("./test.txt",re.compile("\W*(//)\W*")))    
+#print(get_regex_counts("./test.txt",re.compile("\W*(\(\))\W*")))    
+#print(os.path.getsize("./test.txt"))
+
