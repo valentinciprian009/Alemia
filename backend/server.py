@@ -10,7 +10,6 @@ import time
 app = Flask(__name__)
 CORS(app)
 
-
 DOWNLOAD_DIRECTORY = "uploads"
 EXTRACTION_DIRECTORY = "../data/raw/train"
 
@@ -68,6 +67,7 @@ def model_retraining_route():
     # Return a result
     result = {"status": "ok"}
     return jsonify(result)
+
 
 def main():
     app.run(host="0.0.0.0", port=3001, debug=True)
