@@ -1,0 +1,27 @@
+Done processing ./preprocess/train/student_45/sources/Calcule.cpp
+Done processing ./preprocess/train/student_45/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_45/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_45/sources/DoubleClick.cpp
+Done processing ./preprocess/train/student_45/sources/Entity.cpp
+Done processing ./preprocess/train/student_45/sources/Entity_Flower_Peashooter.cpp
+Done processing ./preprocess/train/student_45/sources/Entity_Flower_Snow_Pea.cpp
+Done processing ./preprocess/train/student_45/sources/Entity_Flower_Sunflower.cpp
+Done processing ./preprocess/train/student_45/sources/Entity_Zombie_Basic.cpp
+Done processing ./preprocess/train/student_45/sources/Entity_Zombie_Buckethead.cpp
+Done processing ./preprocess/train/student_45/sources/Interfata.cpp
+Done processing ./preprocess/train/student_45/sources/Interfata_LVL1.cpp
+Done processing ./preprocess/train/student_45/sources/Interfata_LVL2.cpp
+Done processing ./preprocess/train/student_45/sources/Interfata_LVL3.cpp
+Done processing ./preprocess/train/student_45/sources/Procesor.cpp
+Done processing ./preprocess/train/student_45/sources/Proiectil.cpp
+Done processing ./preprocess/train/student_45/sources/Proiectil_Frozen_Pea.cpp
+Done processing ./preprocess/train/student_45/sources/Proiectil_Pea.cpp
+Done processing ./preprocess/train/student_45/sources/Resurse.cpp
+Done processing ./preprocess/train/student_45/sources/Resurse_Sun.cpp
+Done processing ./preprocess/train/student_45/sources/Source.cpp
+Done processing ./preprocess/train/student_45/sources/Sun.cpp
+Done processing ./preprocess/train/student_45/sources/Sunflower.cpp
+Done processing ./preprocess/train/student_45/sources/Utilizator.cpp
+Done processing ./preprocess/train/student_45/sources/Zombie_Basic.cpp
+Done processing ./preprocess/train/student_45/sources/Zombie_Buckethead.cpp
+Total errors found: 848

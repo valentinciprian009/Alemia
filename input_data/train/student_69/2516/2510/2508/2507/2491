@@ -1,4 +1,0 @@
-﻿  CGame.cpp
-c:\users\anda\desktop\new folder (2)\pvsz\cgame.cpp(586): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\anda\desktop\new folder (2)\pvsz\cgame.cpp(603): warning C4715: 'CGame::getRowZombie': not all control paths return a value
-  PvsZ.vcxproj -> C:\Users\Anda\Desktop\New folder (2)\x64\Debug\PvsZ.exe

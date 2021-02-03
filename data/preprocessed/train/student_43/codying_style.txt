@@ -1,0 +1,21 @@
+Done processing ./preprocess/train/student_43/sources/BucketHead_Zombie.cpp
+Done processing ./preprocess/train/student_43/sources/Cherry_BOMB.cpp
+Done processing ./preprocess/train/student_43/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_43/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_43/sources/Field.cpp
+Done processing ./preprocess/train/student_43/sources/Frozen_Pea.cpp
+Done processing ./preprocess/train/student_43/sources/Log.cpp
+Done processing ./preprocess/train/student_43/sources/MAIN.cpp
+Done processing ./preprocess/train/student_43/sources/PEASHOOTER.cpp
+Done processing ./preprocess/train/student_43/sources/Pea.cpp
+Done processing ./preprocess/train/student_43/sources/Plants.cpp
+Done processing ./preprocess/train/student_43/sources/PoleVaulting_Zombie.cpp
+Done processing ./preprocess/train/student_43/sources/Proiectil.cpp
+Done processing ./preprocess/train/student_43/sources/Resource.cpp
+Done processing ./preprocess/train/student_43/sources/SNOW_PEA.cpp
+Done processing ./preprocess/train/student_43/sources/SUNFLOWER.cpp
+Done processing ./preprocess/train/student_43/sources/Sun.cpp
+Done processing ./preprocess/train/student_43/sources/Super_Zombie.cpp
+Done processing ./preprocess/train/student_43/sources/WALL_NUT.cpp
+Done processing ./preprocess/train/student_43/sources/Zombie.cpp
+Total errors found: 1121

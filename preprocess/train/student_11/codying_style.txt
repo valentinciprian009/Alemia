@@ -1,2 +1,0 @@
-Done processing ./preprocess/train/student_11/sources/Source.cpp
-Total errors found: 1

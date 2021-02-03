@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Assests">
+      <UniqueIdentifier>{56bc7ae3-f6f3-456d-b073-cf1906d57e0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Asstes">
+      <UniqueIdentifier>{d956ebaf-ab55-4044-a816-2300d6502ef0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\computerAction">
+      <UniqueIdentifier>{32689807-446b-46b5-83b5-dca10feebf89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\computerAction">
+      <UniqueIdentifier>{b704e112-175e-4b5f-a223-3b81d65b2070}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\flowers">
+      <UniqueIdentifier>{f168aa89-5e5c-4743-995a-2077d589afff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\flowers">
+      <UniqueIdentifier>{1c9121e5-2472-4dc0-a3f8-a3818e5d19c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\parsers">
+      <UniqueIdentifier>{f84db4d2-3ba0-4f26-9d29-de140dee1ad3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\parsers">
+      <UniqueIdentifier>{1e6012f9-cf73-467b-807e-85ba62453088}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Zombie">
+      <UniqueIdentifier>{05f976de-160d-475d-89e7-66edfcac9567}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Zombie">
+      <UniqueIdentifier>{9ec8e2bc-2810-49b9-8746-a16cf28ad80b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\assets">
+      <UniqueIdentifier>{d6a2327b-1293-4d7c-847c-6786dc8217e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\menus">
+      <UniqueIdentifier>{a43533bc-ca93-434b-ac9d-c108b45a63d8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AbstractDrawable.cpp">
+      <Filter>Source Files\Assests</Filter>
+    </ClCompile>
+    <ClCompile Include="BlankSpace.cpp">
+      <Filter>Source Files\Assests</Filter>
+    </ClCompile>
+    <ClCompile Include="Sun.cpp">
+      <Filter>Source Files\Assests</Filter>
+    </ClCompile>
+    <ClCompile Include="computerActionFactory.cpp">
+      <Filter>Source Files\computerAction</Filter>
+    </ClCompile>
+    <ClCompile Include="DummyAction.cpp">
+      <Filter>Source Files\computerAction</Filter>
+    </ClCompile>
+    <ClCompile Include="GameActions.cpp">
+      <Filter>Source Files\computerAction</Filter>
+    </ClCompile>
+    <ClCompile Include="GenericFlower.cpp">
+      <Filter>Source Files\flowers</Filter>
+    </ClCompile>
+    <ClCompile Include="PeaShooter.cpp">
+      <Filter>Source Files\flowers</Filter>
+    </ClCompile>
+    <ClCompile Include="Sunflower.cpp">
+      <Filter>Source Files\flowers</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionParserFactory.cpp">
+      <Filter>Source Files\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="DefeatMenuParser.cpp">
+      <Filter>Source Files\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuParser.cpp">
+      <Filter>Source Files\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="NewUserParser.cpp">
+      <Filter>Source Files\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayingParser.cpp">
+      <Filter>Source Files\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectUserParser.cpp">
+      <Filter>Source Files\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="VictoryMenuParser.cpp">
+      <Filter>Source Files\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="GenericZombie.cpp">
+      <Filter>Source Files\Zombie</Filter>
+    </ClCompile>
+    <ClCompile Include="WalkerZombie.cpp">
+      <Filter>Source Files\Zombie</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleOutput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Logging.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AbstractDrawable.h">
+      <Filter>Header Files\Asstes</Filter>
+    </ClInclude>
+    <ClInclude Include="BlankSpace.h">
+      <Filter>Header Files\Asstes</Filter>
+    </ClInclude>
+    <ClInclude Include="Sun.h">
+      <Filter>Header Files\Asstes</Filter>
+    </ClInclude>
+    <ClInclude Include="computerActionFactory.h">
+      <Filter>Header Files\computerAction</Filter>
+    </ClInclude>
+    <ClInclude Include="DummyAction.h">
+      <Filter>Header Files\computerAction</Filter>
+    </ClInclude>
+    <ClInclude Include="GameActions.h">
+      <Filter>Header Files\computerAction</Filter>
+    </ClInclude>
+    <ClInclude Include="IComputerAction.h">
+      <Filter>Header Files\computerAction</Filter>
+    </ClInclude>
+    <ClInclude Include="GenericFlower.h">
+      <Filter>Header Files\flowers</Filter>
+    </ClInclude>
+    <ClInclude Include="PeaShooter.h">
+      <Filter>Header Files\flowers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sunflower.h">
+      <Filter>Header Files\flowers</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionParserFactory.h">
+      <Filter>Header Files\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="DefeatMenuParser.h">
+      <Filter>Header Files\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="IParser.h">
+      <Filter>Header Files\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuParser.h">
+      <Filter>Header Files\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="NewUserParser.h">
+      <Filter>Header Files\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayingParser.h">
+      <Filter>Header Files\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectUserParser.h">
+      <Filter>Header Files\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="VictoryMenuParser.h">
+      <Filter>Header Files\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="GenericZombie.h">
+      <Filter>Header Files\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="WalkerZombie.h">
+      <Filter>Header Files\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleOutput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Logging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pea.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="bucketHeadZombie.txt">
+      <Filter>Resource Files\assets</Filter>
+    </Text>
+    <Text Include="map1.txt">
+      <Filter>Resource Files\assets</Filter>
+    </Text>
+    <Text Include="map2.txt">
+      <Filter>Resource Files\assets</Filter>
+    </Text>
+    <Text Include="map3.txt">
+      <Filter>Resource Files\assets</Filter>
+    </Text>
+    <Text Include="sun.txt">
+      <Filter>Resource Files\assets</Filter>
+    </Text>
+    <Text Include="peashooter.txt">
+      <Filter>Resource Files\assets</Filter>
+    </Text>
+    <Text Include="sunflower.txt">
+      <Filter>Resource Files\assets</Filter>
+    </Text>
+    <Text Include="zombie.txt">
+      <Filter>Resource Files\assets</Filter>
+    </Text>
+    <Text Include="changeUserMenu.txt">
+      <Filter>Resource Files\menus</Filter>
+    </Text>
+    <Text Include="mainMenu.txt">
+      <Filter>Resource Files\menus</Filter>
+    </Text>
+    <Text Include="newUserMenu.txt">
+      <Filter>Resource Files\menus</Filter>
+    </Text>
+    <Text Include="logging.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="users.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

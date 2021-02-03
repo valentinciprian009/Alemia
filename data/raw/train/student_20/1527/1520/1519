@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Zombies">
+      <UniqueIdentifier>{4d5c6759-01be-4bdd-bcb6-11a772aa20d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Plants">
+      <UniqueIdentifier>{8bac60fc-6733-4366-8e0a-951e4d8c2bbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Zombies">
+      <UniqueIdentifier>{50cb54ee-ec4c-427b-ab94-d197047fd75f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Plants">
+      <UniqueIdentifier>{0695671c-77d7-45a8-ad81-ad54bd03b5d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Console">
+      <UniqueIdentifier>{3fcb26ec-88dc-4e86-9b2d-ef8de8f00f7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Console">
+      <UniqueIdentifier>{64d0f38b-3322-4500-bea8-d294dd900d16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Bullets">
+      <UniqueIdentifier>{27d23fbc-5468-4133-bc0a-35af3761586c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CField.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CResursa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CBullet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="P_Z.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CBucketHeadZombie.cpp">
+      <Filter>Source Files\Zombies</Filter>
+    </ClCompile>
+    <ClCompile Include="CNormalZombie.cpp">
+      <Filter>Source Files\Zombies</Filter>
+    </ClCompile>
+    <ClCompile Include="CZombie.cpp">
+      <Filter>Source Files\Zombies</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlant.cpp">
+      <Filter>Source Files\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="CPeaShooter.cpp">
+      <Filter>Source Files\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleOutput.cpp">
+      <Filter>Source Files\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleInput.cpp">
+      <Filter>Source Files\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="CSunFlower.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CField.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlant.h">
+      <Filter>Header Files\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlant.h">
+      <Filter>Header Files\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="IZombie.h">
+      <Filter>Header Files\Zombies</Filter>
+    </ClInclude>
+    <ClInclude Include="CZombie.h">
+      <Filter>Header Files\Zombies</Filter>
+    </ClInclude>
+    <ClInclude Include="CResursa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="P_Z.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPeaShooter.h">
+      <Filter>Header Files\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="CNormalZombie.h">
+      <Filter>Header Files\Zombies</Filter>
+    </ClInclude>
+    <ClInclude Include="CBucketHeadZombie.h">
+      <Filter>Header Files\Zombies</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleInput.h">
+      <Filter>Header Files\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleOutput.h">
+      <Filter>Header Files\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="CSunFlower.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CBullet.h">
+      <Filter>Header Files\Bullets</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

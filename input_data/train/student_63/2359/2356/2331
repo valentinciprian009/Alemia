@@ -1,5 +1,0 @@
-﻿  Sun.cpp
-  main.cpp
-c:\users\madalin\source\repos\poovszomborig\poovszomborig\main.cpp(43): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
-  POOVSzombORIG.vcxproj -> C:\Users\Madalin\source\repos\POOVSzombORIG\Debug\POOVSzombORIG.exe

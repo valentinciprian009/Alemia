@@ -1,0 +1,17 @@
+Done processing ./preprocess/train/student_34/sources/CherryBomb.cpp
+Done processing ./preprocess/train/student_34/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_34/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_34/sources/Draw.cpp
+Done processing ./preprocess/train/student_34/sources/Frozen_Pea.cpp
+Done processing ./preprocess/train/student_34/sources/Menu.cpp
+Done processing ./preprocess/train/student_34/sources/Pea.cpp
+Done processing ./preprocess/train/student_34/sources/Peashooter.cpp
+Done processing ./preprocess/train/student_34/sources/Pick_and_plant.cpp
+Done processing ./preprocess/train/student_34/sources/Snow_Pea.cpp
+Done processing ./preprocess/train/student_34/sources/Sun.cpp
+Done processing ./preprocess/train/student_34/sources/Sunflower.cpp
+Done processing ./preprocess/train/student_34/sources/Terrain.cpp
+Done processing ./preprocess/train/student_34/sources/WallNut.cpp
+Done processing ./preprocess/train/student_34/sources/Zombie.cpp
+Done processing ./preprocess/train/student_34/sources/main.cpp
+Total errors found: 2061

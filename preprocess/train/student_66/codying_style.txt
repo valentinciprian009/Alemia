@@ -1,7 +1,0 @@
-Done processing ./preprocess/train/student_66/sources/ConsoleInput.cpp
-Done processing ./preprocess/train/student_66/sources/ConsoleOutput.cpp
-Done processing ./preprocess/train/student_66/sources/GardenPlants.cpp
-Done processing ./preprocess/train/student_66/sources/Plants.cpp
-Done processing ./preprocess/train/student_66/sources/Source.cpp
-Done processing ./preprocess/train/student_66/sources/iPlants.cpp
-Total errors found: 528

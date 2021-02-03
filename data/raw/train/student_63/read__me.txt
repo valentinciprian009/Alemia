@@ -1,0 +1,3 @@
+POO vs Zombie : 
+Jocul are implementat un meniu foarte sugestiv astfel incat utilizatorul
+nu are nevoie de instructiuni pentru utilizarea mini-aplicatiei.

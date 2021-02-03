@@ -1,4 +1,0 @@
-Aladin al_din 700 10
-Mihai mihaita 0 1
-Diana EEE 600 1
-Mihaita GGG 0 1

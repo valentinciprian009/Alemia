@@ -1,0 +1,20 @@
+Done processing ./preprocess/train/student_26/sources/CBucketheadZombie.cpp
+Done processing ./preprocess/train/student_26/sources/CClassicZombie.cpp
+Done processing ./preprocess/train/student_26/sources/CEntity.cpp
+Done processing ./preprocess/train/student_26/sources/CPeaShooter.cpp
+Done processing ./preprocess/train/student_26/sources/CPlants.cpp
+Done processing ./preprocess/train/student_26/sources/CPlayer.cpp
+Done processing ./preprocess/train/student_26/sources/CProiectil.cpp
+Done processing ./preprocess/train/student_26/sources/CPunct.cpp
+Done processing ./preprocess/train/student_26/sources/CSun.cpp
+Done processing ./preprocess/train/student_26/sources/CSunFlower.cpp
+Done processing ./preprocess/train/student_26/sources/CTeren.cpp
+Done processing ./preprocess/train/student_26/sources/CTeren_1.cpp
+Done processing ./preprocess/train/student_26/sources/CTeren_2.cpp
+Done processing ./preprocess/train/student_26/sources/CTeren_3.cpp
+Done processing ./preprocess/train/student_26/sources/CWallNut.cpp
+Done processing ./preprocess/train/student_26/sources/CZombie.cpp
+Done processing ./preprocess/train/student_26/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_26/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_26/sources/Main.cpp
+Total errors found: 1357

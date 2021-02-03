@@ -1,9 +1,0 @@
-#pragma once
-#include "DrawablePlant.h"
-#include "DrawableZombie.h"
-#include "DrawableSun.h"
-#include "DrawableProiectil.h"
-#include "DrawableScene.h"
-#include "DrawCircle.h"
-#include "DrawRectangle.h"
-#include "DrawTriangle.h"

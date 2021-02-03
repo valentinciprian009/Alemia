@@ -1,0 +1,2 @@
+A aparut un soare la (152, 7)
+A aparut un zombie la (152, 12)

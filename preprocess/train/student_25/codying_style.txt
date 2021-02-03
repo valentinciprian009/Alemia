@@ -1,8 +1,0 @@
-Done processing ./preprocess/train/student_25/sources/Box.cpp
-Done processing ./preprocess/train/student_25/sources/ConsoleInput.cpp
-Done processing ./preprocess/train/student_25/sources/ConsoleOutput.cpp
-Done processing ./preprocess/train/student_25/sources/Entity.cpp
-Done processing ./preprocess/train/student_25/sources/Game.cpp
-Done processing ./preprocess/train/student_25/sources/Main.cpp
-Done processing ./preprocess/train/student_25/sources/Player.cpp
-Total errors found: 930

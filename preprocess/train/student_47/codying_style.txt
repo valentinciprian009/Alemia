@@ -1,6 +1,0 @@
-Done processing ./preprocess/train/student_47/sources/ConsoleInput.cpp
-Done processing ./preprocess/train/student_47/sources/ConsoleOutput.cpp
-Done processing ./preprocess/train/student_47/sources/Logger.cpp
-Done processing ./preprocess/train/student_47/sources/Main.cpp
-Done processing ./preprocess/train/student_47/sources/Table.cpp
-Total errors found: 1061

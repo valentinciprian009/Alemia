@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Entity">
+      <UniqueIdentifier>{98ed41fc-6f66-4820-ab3c-4cb7dc5739ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entity\EntityIntterfaces">
+      <UniqueIdentifier>{7601bf13-f942-4af3-997b-34e47ffff615}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entity\EntityImplems">
+      <UniqueIdentifier>{c91535e6-0e3e-4e2b-9e1d-c8ca147ae61a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\BattleEntities">
+      <UniqueIdentifier>{ccf7e9b2-70ea-40c7-8549-89f696684cf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entity">
+      <UniqueIdentifier>{61d3324e-f7b0-4881-be5a-76be07675651}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BattleEntities">
+      <UniqueIdentifier>{e04a4945-931c-4638-a24c-649486506fdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\resources">
+      <UniqueIdentifier>{62c0c646-d7df-4eb8-83b2-04eeec817221}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\BattleEntities\projectiles">
+      <UniqueIdentifier>{0fa7b38e-111e-49e1-9d96-c8474a1e7934}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\resources">
+      <UniqueIdentifier>{761f81ba-5679-4d04-8905-c8edd4da8a98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BattleEntities\projectiles">
+      <UniqueIdentifier>{8cb79351-435a-49b5-b25f-74d4f7c778e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entity\Game zones">
+      <UniqueIdentifier>{c0404392-2ebb-4a32-9359-3b546108a69a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\BattleEntities\Plants">
+      <UniqueIdentifier>{2c727e6d-cd4a-4ac2-aa6a-a9c0882417bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game zones">
+      <UniqueIdentifier>{d218f904-3875-4d39-9c3d-29da706914b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BattleEntities\Plants">
+      <UniqueIdentifier>{e2fd764f-abd0-4a8b-b41e-cad74a9708e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BattleEntities\Zombies">
+      <UniqueIdentifier>{e5932a67-0ffc-40a3-bccf-72948f6e20be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\BattleEntities\Zombie">
+      <UniqueIdentifier>{45fc3359-e810-470c-b57d-9009e9257ba5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleOutput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="User.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="iBattleEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="iDrawable.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="iEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="iMovingEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="movingEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Sun.cpp">
+      <Filter>Source Files\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource.cpp">
+      <Filter>Source Files\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="iResource.cpp">
+      <Filter>Source Files\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Pea.cpp">
+      <Filter>Source Files\BattleEntities\projectiles</Filter>
+    </ClCompile>
+    <ClCompile Include="FrozenPea.cpp">
+      <Filter>Source Files\BattleEntities\projectiles</Filter>
+    </ClCompile>
+    <ClCompile Include="iProjectile.cpp">
+      <Filter>Source Files\BattleEntities\projectiles</Filter>
+    </ClCompile>
+    <ClCompile Include="iPlant.cpp">
+      <Filter>Source Files\BattleEntities\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="iPlantShooter.cpp">
+      <Filter>Source Files\BattleEntities\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="Peashooter.cpp">
+      <Filter>Source Files\BattleEntities\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="Plant.cpp">
+      <Filter>Source Files\BattleEntities\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="PlantShooter.cpp">
+      <Filter>Source Files\BattleEntities\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="Projectile.cpp">
+      <Filter>Source Files\BattleEntities\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="Sunflower.cpp">
+      <Filter>Source Files\BattleEntities\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="Wallnut.cpp">
+      <Filter>Source Files\BattleEntities\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="CherryBomb.cpp">
+      <Filter>Source Files\BattleEntities\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="iRectangle.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="myRectangle.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="ContainerRectangle.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleZone.cpp">
+      <Filter>Source Files\Game zones</Filter>
+    </ClCompile>
+    <ClCompile Include="PlantChooser.cpp">
+      <Filter>Source Files\Game zones</Filter>
+    </ClCompile>
+    <ClCompile Include="SunZone.cpp">
+      <Filter>Source Files\Game zones</Filter>
+    </ClCompile>
+    <ClCompile Include="SnowPea.cpp">
+      <Filter>Source Files\BattleEntities\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="MyException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iZombie.cpp">
+      <Filter>Source Files\BattleEntities\Zombies</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperZombie.cpp">
+      <Filter>Source Files\BattleEntities\Zombies</Filter>
+    </ClCompile>
+    <ClCompile Include="PoleVaultingZombie.cpp">
+      <Filter>Source Files\BattleEntities\Zombies</Filter>
+    </ClCompile>
+    <ClCompile Include="Zombie.cpp">
+      <Filter>Source Files\BattleEntities\Zombies</Filter>
+    </ClCompile>
+    <ClCompile Include="BucketHeadZombie.cpp">
+      <Filter>Source Files\BattleEntities\Zombies</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConsoleInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleOutput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="User.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iBattleEntity.h">
+      <Filter>Header Files\Entity\EntityIntterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="iDrawable.h">
+      <Filter>Header Files\Entity\EntityIntterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="iEntity.h">
+      <Filter>Header Files\Entity\EntityIntterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="iMovingEntity.h">
+      <Filter>Header Files\Entity\EntityIntterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleEntity.h">
+      <Filter>Header Files\Entity\EntityImplems</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files\Entity\EntityImplems</Filter>
+    </ClInclude>
+    <ClInclude Include="movingEntity.h">
+      <Filter>Header Files\Entity\EntityImplems</Filter>
+    </ClInclude>
+    <ClInclude Include="iResource.h">
+      <Filter>Header Files\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Sun.h">
+      <Filter>Header Files\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="FrozenPea.h">
+      <Filter>Header Files\BattleEntities\projectiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Pea.h">
+      <Filter>Header Files\BattleEntities\projectiles</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleZone.h">
+      <Filter>Header Files\Entity\Game zones</Filter>
+    </ClInclude>
+    <ClInclude Include="SunZone.h">
+      <Filter>Header Files\Entity\Game zones</Filter>
+    </ClInclude>
+    <ClInclude Include="PlantChooser.h">
+      <Filter>Header Files\Entity\Game zones</Filter>
+    </ClInclude>
+    <ClInclude Include="myRectangle.h">
+      <Filter>Header Files\Entity\EntityImplems</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerRectangle.h">
+      <Filter>Header Files\Entity\EntityImplems</Filter>
+    </ClInclude>
+    <ClInclude Include="iRectangle.h">
+      <Filter>Header Files\Entity\EntityIntterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="iPlant.h">
+      <Filter>Header Files\BattleEntities\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="iPlantShooter.h">
+      <Filter>Header Files\BattleEntities\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="Peashooter.h">
+      <Filter>Header Files\BattleEntities\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="PlantShooter.h">
+      <Filter>Header Files\BattleEntities\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="Plant.h">
+      <Filter>Header Files\BattleEntities\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="Sunflower.h">
+      <Filter>Header Files\BattleEntities\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="Wallnut.h">
+      <Filter>Header Files\BattleEntities\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="SnowPea.h">
+      <Filter>Header Files\BattleEntities\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="CherryBomb.h">
+      <Filter>Header Files\BattleEntities\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="Projectile.h">
+      <Filter>Header Files\BattleEntities\projectiles</Filter>
+    </ClInclude>
+    <ClInclude Include="MyException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iProjectile.h">
+      <Filter>Header Files\BattleEntities\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="BucketHeadZombie.h">
+      <Filter>Header Files\BattleEntities\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="iZombie.h">
+      <Filter>Header Files\BattleEntities\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="PoleVaultingZombie.h">
+      <Filter>Header Files\BattleEntities\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperZombie.h">
+      <Filter>Header Files\BattleEntities\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="Zombie.h">
+      <Filter>Header Files\BattleEntities\Zombie</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="user.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

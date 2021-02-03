@@ -1,0 +1,26 @@
+Done processing ./preprocess/train/student_33/sources/Avatar.cpp
+Done processing ./preprocess/train/student_33/sources/AvatarTile.cpp
+Done processing ./preprocess/train/student_33/sources/BattleLine.cpp
+Done processing ./preprocess/train/student_33/sources/BattleTile.cpp
+Done processing ./preprocess/train/student_33/sources/Battlefield.cpp
+Done processing ./preprocess/train/student_33/sources/BucketHeadZombie.cpp
+Done processing ./preprocess/train/student_33/sources/CherryBomb.cpp
+Done processing ./preprocess/train/student_33/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_33/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_33/sources/IDrawable.cpp
+Done processing ./preprocess/train/student_33/sources/Log.cpp
+Done processing ./preprocess/train/student_33/sources/Main.cpp
+Done processing ./preprocess/train/student_33/sources/Menu.cpp
+Done processing ./preprocess/train/student_33/sources/MenuTile.cpp
+Done processing ./preprocess/train/student_33/sources/PeaShooter.cpp
+Done processing ./preprocess/train/student_33/sources/Plant.cpp
+Done processing ./preprocess/train/student_33/sources/PlantShop.cpp
+Done processing ./preprocess/train/student_33/sources/PoleVaultingZombie.cpp
+Done processing ./preprocess/train/student_33/sources/Proiectil.cpp
+Done processing ./preprocess/train/student_33/sources/ResourceGrid.cpp
+Done processing ./preprocess/train/student_33/sources/Scoreboard.cpp
+Done processing ./preprocess/train/student_33/sources/Sun.cpp
+Done processing ./preprocess/train/student_33/sources/Sunflower.cpp
+Done processing ./preprocess/train/student_33/sources/WallNut.cpp
+Done processing ./preprocess/train/student_33/sources/Zombie.cpp
+Total errors found: 2181

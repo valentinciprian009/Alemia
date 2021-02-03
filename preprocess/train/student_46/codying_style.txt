@@ -1,8 +1,0 @@
-Done processing ./preprocess/train/student_46/sources/ConsoleInput.cpp
-Done processing ./preprocess/train/student_46/sources/ConsoleOutput.cpp
-Done processing ./preprocess/train/student_46/sources/PeaShooter.cpp
-Done processing ./preprocess/train/student_46/sources/Source.cpp
-Done processing ./preprocess/train/student_46/sources/StartTheGame.cpp
-Done processing ./preprocess/train/student_46/sources/Sun.cpp
-Done processing ./preprocess/train/student_46/sources/Zombie.cpp
-Total errors found: 628

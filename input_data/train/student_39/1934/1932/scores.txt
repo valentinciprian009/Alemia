@@ -1,4 +1,0 @@
-toto 250
-bla 670
-teo 476
-prof 567

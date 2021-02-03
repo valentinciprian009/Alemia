@@ -1,0 +1,14 @@
+﻿  Game.cpp
+c:\users\gabe\source\repos\poovszombies\poovszombies\time.h(20): warning C4244: '=': conversion from '_Rep' to 'int', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+  Source.cpp
+c:\users\gabe\source\repos\poovszombies\poovszombies\time.h(20): warning C4244: '=': conversion from '_Rep' to 'int', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+  Generating Code...
+  POOvsZombies.vcxproj -> C:\Users\Gabe\source\repos\POOvsZombies\Debug\POOvsZombies.exe

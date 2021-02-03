@@ -1,0 +1,16 @@
+Done processing ./preprocess/train/student_38/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_38/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_38/sources/bullet.cpp
+Done processing ./preprocess/train/student_38/sources/flower.cpp
+Done processing ./preprocess/train/student_38/sources/flower_bar.cpp
+Done processing ./preprocess/train/student_38/sources/flower_tile.cpp
+Done processing ./preprocess/train/student_38/sources/garden.cpp
+Done processing ./preprocess/train/student_38/sources/garden_line.cpp
+Done processing ./preprocess/train/student_38/sources/garden_tile.cpp
+Done processing ./preprocess/train/student_38/sources/main.cpp
+Done processing ./preprocess/train/student_38/sources/player.cpp
+Done processing ./preprocess/train/student_38/sources/resource_bar.cpp
+Done processing ./preprocess/train/student_38/sources/resource_tile.cpp
+Done processing ./preprocess/train/student_38/sources/zombie.cpp
+Done processing ./preprocess/train/student_38/sources/zombie_manager.cpp
+Total errors found: 828

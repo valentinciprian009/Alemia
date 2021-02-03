@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Zombies">
+      <UniqueIdentifier>{8011bae5-b337-4ddc-9601-b9912e6411f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Plants">
+      <UniqueIdentifier>{d17aad49-0bdf-4eb3-a299-678928dc7d12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Resources">
+      <UniqueIdentifier>{07333a5c-cea2-4814-9aeb-a8e5f974260a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Projectiles">
+      <UniqueIdentifier>{4892b716-12db-42d9-b0fc-8042f7ae5443}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Projectiles">
+      <UniqueIdentifier>{45c9758d-066c-4535-a5e9-7789a21a7a0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Resources">
+      <UniqueIdentifier>{0a29b28b-07c6-4cbd-b97f-bbf07fd737f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Zombies">
+      <UniqueIdentifier>{a244e296-3aff-4249-8f13-16ecbd539304}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Plants">
+      <UniqueIdentifier>{c95d6fec-910a-495a-8db8-ddaf3896bcbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Others">
+      <UniqueIdentifier>{22df692e-3a0a-4f14-a7cf-999b08c39249}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Others">
+      <UniqueIdentifier>{26921b67-9871-4ca9-9abb-393f426b7935}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BucketHead.cpp">
+      <Filter>Source Files\Zombies</Filter>
+    </ClCompile>
+    <ClCompile Include="NormalZombie.cpp">
+      <Filter>Source Files\Zombies</Filter>
+    </ClCompile>
+    <ClCompile Include="Plant.cpp">
+      <Filter>Source Files\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource.cpp">
+      <Filter>Source Files\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Peashooter.cpp">
+      <Filter>Source Files\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="Pea.cpp">
+      <Filter>Source Files\Projectiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Projectile.cpp">
+      <Filter>Source Files\Projectiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Sunflower.cpp">
+      <Filter>Source Files\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="Zombie.cpp">
+      <Filter>Source Files\Zombies</Filter>
+    </ClCompile>
+    <ClCompile Include="Sun.cpp">
+      <Filter>Source Files\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleInput.cpp">
+      <Filter>Source Files\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleOutput.cpp">
+      <Filter>Source Files\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>Source Files\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Source Files\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="SetConsole.cpp">
+      <Filter>Source Files\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>Source Files\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Wallnut.cpp">
+      <Filter>Source Files\Plants</Filter>
+    </ClCompile>
+    <ClCompile Include="CherryBomb.cpp">
+      <Filter>Source Files\Plants</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="PvsZSong.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Zombie.h">
+      <Filter>Header Files\Zombies</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalZombie.h">
+      <Filter>Header Files\Zombies</Filter>
+    </ClInclude>
+    <ClInclude Include="BucketHead.h">
+      <Filter>Header Files\Zombies</Filter>
+    </ClInclude>
+    <ClInclude Include="Peashooter.h">
+      <Filter>Header Files\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="Sunflower.h">
+      <Filter>Header Files\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="Plant.h">
+      <Filter>Header Files\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Sun.h">
+      <Filter>Header Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Projectile.h">
+      <Filter>Header Files\Projectiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Pea.h">
+      <Filter>Header Files\Projectiles</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleInput.h">
+      <Filter>Header Files\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleOutput.h">
+      <Filter>Header Files\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>Header Files\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Header Files\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="SetConsole.h">
+      <Filter>Header Files\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>Header Files\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Wallnut.h">
+      <Filter>Header Files\Plants</Filter>
+    </ClInclude>
+    <ClInclude Include="CherryBomb.h">
+      <Filter>Header Files\Plants</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="gameover.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="poovszombies.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="log.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="players.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="levels.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="win.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram11.cd" />
+  </ItemGroup>
+</Project>

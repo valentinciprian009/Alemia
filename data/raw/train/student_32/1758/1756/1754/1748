@@ -1,0 +1,12 @@
+﻿  Engine.cpp
+C:\Users\Odo\source\repos\Tema_2_POOvsZombies\tema_2_pooVSzombies\Engine.cpp(159,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Odo\source\repos\Tema_2_POOvsZombies\tema_2_pooVSzombies\Engine.cpp(170,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Odo\source\repos\Tema_2_POOvsZombies\tema_2_pooVSzombies\Engine.cpp(207,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Odo\source\repos\Tema_2_POOvsZombies\tema_2_pooVSzombies\Engine.cpp(215,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Odo\source\repos\Tema_2_POOvsZombies\tema_2_pooVSzombies\Engine.cpp(262,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Odo\source\repos\Tema_2_POOvsZombies\tema_2_pooVSzombies\Engine.cpp(267,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Odo\source\repos\Tema_2_POOvsZombies\tema_2_pooVSzombies\Engine.cpp(279,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Odo\source\repos\Tema_2_POOvsZombies\tema_2_pooVSzombies\Engine.cpp(432,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Odo\source\repos\Tema_2_POOvsZombies\tema_2_pooVSzombies\Engine.cpp(452,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Odo\source\repos\Tema_2_POOvsZombies\tema_2_pooVSzombies\Engine.cpp(477,25): warning C4018: '<': signed/unsigned mismatch
+  tema_2_pooVSzombies.vcxproj -> C:\Users\Odo\source\repos\Tema_2_POOvsZombies\Debug\tema_2_pooVSzombies.exe

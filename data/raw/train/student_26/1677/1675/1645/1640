@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bogda\desktop\pvsz\pvsz</FILEPATH>
+      <FILENAME>csun.cpp</FILENAME>
+      <LINE>79</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CSun::x_beg' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CSun::{ctor}</FUNCTION>
+    <DECORATED>??0CSun@@QEAA@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>79</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bogda\desktop\pvsz\pvsz</FILEPATH>
+      <FILENAME>csun.cpp</FILENAME>
+      <LINE>79</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CSun::y_beg' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CSun::{ctor}</FUNCTION>
+    <DECORATED>??0CSun@@QEAA@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>79</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bogda\desktop\pvsz\pvsz</FILEPATH>
+      <FILENAME>csun.cpp</FILENAME>
+      <LINE>79</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CSun::x_end' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CSun::{ctor}</FUNCTION>
+    <DECORATED>??0CSun@@QEAA@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>79</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bogda\desktop\pvsz\pvsz</FILEPATH>
+      <FILENAME>csun.cpp</FILENAME>
+      <LINE>79</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CSun::y_end' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CSun::{ctor}</FUNCTION>
+    <DECORATED>??0CSun@@QEAA@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>79</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bogda\desktop\pvsz\pvsz</FILEPATH>
+      <FILENAME>csun.cpp</FILENAME>
+      <LINE>79</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CSun::pozitie' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CSun::{ctor}</FUNCTION>
+    <DECORATED>??0CSun@@QEAA@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>79</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bogda\desktop\pvsz\pvsz</FILEPATH>
+      <FILENAME>csun.cpp</FILENAME>
+      <LINE>83</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CSun::x_beg' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CSun::{ctor}</FUNCTION>
+    <DECORATED>??0CSun@@QEAA@XZ</DECORATED>
+    <FUNCLINE>83</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bogda\desktop\pvsz\pvsz</FILEPATH>
+      <FILENAME>csun.cpp</FILENAME>
+      <LINE>83</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CSun::y_beg' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CSun::{ctor}</FUNCTION>
+    <DECORATED>??0CSun@@QEAA@XZ</DECORATED>
+    <FUNCLINE>83</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bogda\desktop\pvsz\pvsz</FILEPATH>
+      <FILENAME>csun.cpp</FILENAME>
+      <LINE>83</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CSun::x_end' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CSun::{ctor}</FUNCTION>
+    <DECORATED>??0CSun@@QEAA@XZ</DECORATED>
+    <FUNCLINE>83</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bogda\desktop\pvsz\pvsz</FILEPATH>
+      <FILENAME>csun.cpp</FILENAME>
+      <LINE>83</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CSun::y_end' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CSun::{ctor}</FUNCTION>
+    <DECORATED>??0CSun@@QEAA@XZ</DECORATED>
+    <FUNCLINE>83</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\bogda\desktop\pvsz\pvsz</FILEPATH>
+      <FILENAME>csun.cpp</FILENAME>
+      <LINE>83</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CSun::pozitie' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CSun::{ctor}</FUNCTION>
+    <DECORATED>??0CSun@@QEAA@XZ</DECORATED>
+    <FUNCLINE>83</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

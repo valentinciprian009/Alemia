@@ -1,3 +1,0 @@
-﻿  sun.cpp
-C:\Users\Merlus\Desktop\poooooo temaaaa\PvsZ\sun.cpp(41,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  PvsZ.vcxproj -> C:\Users\Merlus\Desktop\poooooo temaaaa\x64\Debug\PvsZ.exe

@@ -1,0 +1,13 @@
+Done processing ./preprocess/train/student_17/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_17/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_17/sources/Container.cpp
+Done processing ./preprocess/train/student_17/sources/IDrawable.cpp
+Done processing ./preprocess/train/student_17/sources/Log.cpp
+Done processing ./preprocess/train/student_17/sources/Plant.cpp
+Done processing ./preprocess/train/student_17/sources/Point.cpp
+Done processing ./preprocess/train/student_17/sources/Proiectil.cpp
+Done processing ./preprocess/train/student_17/sources/Resource.cpp
+Done processing ./preprocess/train/student_17/sources/SegmentedContainer.cpp
+Done processing ./preprocess/train/student_17/sources/Zombie.cpp
+Done processing ./preprocess/train/student_17/sources/main.cpp
+Total errors found: 1466

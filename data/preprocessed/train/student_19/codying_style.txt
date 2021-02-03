@@ -1,0 +1,7 @@
+Done processing ./preprocess/train/student_19/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_19/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_19/sources/Main.cpp
+Done processing ./preprocess/train/student_19/sources/Teren.cpp
+Done processing ./preprocess/train/student_19/sources/score.cpp
+Done processing ./preprocess/train/student_19/sources/sun.cpp
+Total errors found: 467

@@ -1,0 +1,26 @@
+Done processing ./preprocess/train/student_6/sources/Buzunar.cpp
+Done processing ./preprocess/train/student_6/sources/Caractere.cpp
+Done processing ./preprocess/train/student_6/sources/Consola.cpp
+Done processing ./preprocess/train/student_6/sources/ConsoleInput.cpp
+Done processing ./preprocess/train/student_6/sources/ConsoleOutput.cpp
+Done processing ./preprocess/train/student_6/sources/Easy.cpp
+Done processing ./preprocess/train/student_6/sources/Entity.cpp
+Done processing ./preprocess/train/student_6/sources/Game_Final_Sper.cpp
+Done processing ./preprocess/train/student_6/sources/Map.cpp
+Done processing ./preprocess/train/student_6/sources/Plant_Cherry_Bomb.cpp
+Done processing ./preprocess/train/student_6/sources/Plant_Peashooter.cpp
+Done processing ./preprocess/train/student_6/sources/Plant_Snow_Pea.cpp
+Done processing ./preprocess/train/student_6/sources/Plant_Sunflower.cpp
+Done processing ./preprocess/train/student_6/sources/Plant_Wall_nut.cpp
+Done processing ./preprocess/train/student_6/sources/Resources.cpp
+Done processing ./preprocess/train/student_6/sources/Scor.cpp
+Done processing ./preprocess/train/student_6/sources/Score_board.cpp
+Done processing ./preprocess/train/student_6/sources/Select_Lvl.cpp
+Done processing ./preprocess/train/student_6/sources/Sori.cpp
+Done processing ./preprocess/train/student_6/sources/Source.cpp
+Done processing ./preprocess/train/student_6/sources/Sun.cpp
+Done processing ./preprocess/train/student_6/sources/Zm_Basic.cpp
+Done processing ./preprocess/train/student_6/sources/Zm_BucketHead.cpp
+Done processing ./preprocess/train/student_6/sources/Zm_PoleVaulting.cpp
+Done processing ./preprocess/train/student_6/sources/Zm_Super.cpp
+Total errors found: 1666
