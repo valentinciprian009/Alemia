@@ -127,6 +127,17 @@ class Train:
 
         return rmse
 
+    def calculate_test(self, model_name = WEIGHTS_FILE):
+        self.regressor = joblib.load(model_name)
+
+        y_predicted = self.regressor.predict(self.test_data)
+
+        f = open("../others/results.txt", "w")
+
+        for i in y_predicted:
+            f.write(str(round(i,2)) + "\n")
+  
+        return y_predicted
 
 class Predictor:
     def __init__(self, model_name=WEIGHTS_FILE):
@@ -139,3 +150,10 @@ class Predictor:
         prediction = self.model.predict(features)
 
         return prediction
+
+
+#How to run
+
+# train = Train(True)
+# train.train()
+# train.calculate_test()
