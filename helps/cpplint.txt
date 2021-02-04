@@ -1,5 +1,0 @@
-pip3 install cpplint
-export PATH=$PATH:~/.local/bin/
-
-Details https://github.com/cpplint/cpplint
-
