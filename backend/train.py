@@ -26,7 +26,7 @@ class Train:
             self.regressor = LinearRegression()
 
         #TODO(@apostolescus)
-        self.x, self.y = Preprocessor().get_dataset()
+        self.x, self.y, self.test_data, _ = Preprocessor().get_dataset()
 
     # False to get test data, True to get train data
     def _get_test_train_data(self, train):
