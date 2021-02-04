@@ -60,7 +60,6 @@ def create_csv(trainDir,outfilename, students):
     nrCrt=0
     print(students)
     for std in students:
-        print("here")
         local_dir = trainDir+std
         headers = [h for h in os.listdir(local_dir +"/headers/") if os.path.isfile(os.path.join(local_dir+"/headers/", h))]
         sources = [s for s in os.listdir(local_dir+"/sources/") if os.path.isfile(os.path.join(local_dir+"/sources/", s))]
@@ -186,7 +185,6 @@ def merge_csv(src, dest):
     Lines = file1.readlines()
     last_line = Lines[-1]
     last_index = last_line.split(',')[0]
-
     Lines2 = file2.readlines()
     for line in Lines2[1:]:
         fields = line.split(",")
@@ -195,34 +193,58 @@ def merge_csv(src, dest):
         for f in fields[1:len(fields)-1]:
             file1.write(f+",")
         file1.write("\n")
+    return Lines2[1:]
 
 def init_setup():
-    create_dir("./data/preprocessed/")
-    trainDir = "./data/preprocessed/train/"
-    testDir = "./data/preprocessed/test/"
+    create_dir("../data/preprocessed/")
+    trainDir = "../data/preprocessed/train/"
+    testDir = "../data/preprocessed/test/"
     create_dir(trainDir)
     create_dir(testDir)
 
-    preprocess_datas("./data/raw/train/", trainDir)
-    preprocess_datas("./data/raw/test/", testDir)
+    preprocess_datas("../data/raw/train/", trainDir)
+    preprocess_datas("../data/raw/test/", testDir)
     students = [d for d in os.listdir(trainDir) if os.path.isdir(os.path.join(trainDir, d))]
-    create_csv(trainDir,"./data/features.csv",students)
+    create_csv(trainDir,"../data/features.csv",students)
+    #labalurile initiali
+    return students
 
-def retrain_data(path_to_file): 
-    trainDir = "./data/preprocessed/train/"
-    newFiles = preprocess_datas(path_to_file, trainDir)
+
+def retrain_data_one(path_to_new_label): 
+    trainDir = "../data/preprocessed/train/"
    
-    students = [d for d in os.listdir(trainDir) if os.path.isdir(os.path.join(trainDir, d))]
-    newStd = []
-    for new in newFiles:
-        for std in students:
-            if(std == new):
-                newStd.append(std)
+    newLabel = preprocess_datas(path_to_new_label, trainDir)
+    allLabels = [d for d in os.listdir(trainDir) if os.path.isdir(os.path.join(trainDir, d))]
+    newLabels= []
+    for label in allLabels:
+        if(label == newLabel[0]):
+                newLabels.append(label)
         
-    
-    create_csv(trainDir,"./data/featuresRetrained.csv",newStd)
-    merge_csv("./data/featuresRetrained.csv","./data/features.csv")
+   
+    create_csv(trainDir,"../data/featuresRetrained.csv",newLabels)
+    return merge_csv("../data/featuresRetrained.csv","../data/features.csv")
 
+def add_new_line_csv(csv_file, data):
+    file1 = open(csv_file,"r+")
+    Lines = file1.readlines()
+    last_line = Lines[-1]
+    last_index = last_line.split(',')[0]
+    for i in range(len(data)):
+        if i == 0:
+            nr_crt = int(data[i])+int(last_index)+1
+            file1.write(str(nr_crt)+",")
+        file1.write(data[i]+",")
+    file1.write("\n")
+
+#Initializare date initiale
 #init_setup()
-#retrain_data("./test/")
 
+#Reantrenare
+#Example : student_1 nu se afla in preprocessed/train/
+#print(retrain_data_one("../data/raw/train/student_51/"))
+#output: [67, 'student_1', '32', '2067', '21', '29', '18', '0', '55', '16', '10', '25', '1', '7', '9', '0', '0', '30', '8', '268', '25447', '55616']
+
+#Adauga lista->data in csv
+#Calculeaza automat urmatorul index: last_index+=data[0]+1
+#data = ['0','student_1','32','2067','21','29','18','0','55','16','10','25','1','7','9','0','0','30','8','268','25447','55616']
+#add_new_line_csv("../data/featuresRetrained.csv", data)
