@@ -1,0 +1,182 @@
+\documentclass{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{minted}
+\usepackage{datetime}
+\usepackage{amsmath}
+
+% Configuration for packages
+\renewcommand*\contentsname{Tabelă de Conținut}
+\renewcommand*\figurename{Imagine}
+\usemintedstyle{bw}
+\hyphenpenalty=100000
+
+% Content of title page
+\title{
+    \includegraphics[width=3cm, height=3.5cm]{images/ATM.png} \\
+    \vspace{5mm}
+    Descrierea Aplicației \textbf{Alemia}
+    \vspace{10mm}
+}
+\vspace{20mm}
+\author{
+    Apostolescu Ștefan \\
+    Băjan Ionuț-Mihăiță \\
+    Iosif George-Andrei \\
+    \vspace{10mm}
+}
+\ddmmyyyydate
+
+% Beginning of the document
+\begin{document}
+
+% Title page
+\null
+\nointerlineskip 
+\vfill
+\let\snewpage \newpage
+\let\newpage \relax
+\clearpage\maketitle
+\thispagestyle{empty}
+\let \newpage \snewpage
+\vfill 
+\break
+
+\newpage
+
+% Table of content
+\setcounter{page}{1}
+\tableofcontents
+
+\newpage
+
+% Section
+\section{Introducere}
+
+\textbf{Alemia} este o aplicație ce folosește algoritmi de învățare automată cu scopul de a automatiza procesul de oferire a unor note pentru proiectele realizate de studenți, pentru cursul de "\textit{Programare Orientată pe Obiecte}". Oferă profesorilor posibilitatea de a contrui seturi de date cu acest tip de proiecte, de a antrena propriile modele de învățare automată, respectiv de a le ajusta în situațiile în care notele prezise nu sunt unele de încredere.
+
+% Section
+\section{Noțiuni Teoretice}
+
+\subsection{Algoritmi de Învățare Automată}
+
+\subsubsection{Regresia Liniară}
+
+Regresia liniară este folosită pentru a prezice relația dintre unul sau mai mulți factori sau variabile. Pentru doua variabile (una de intrare și una de iesire) va fi generată o linie care va fi folosită pentru prezicerea unor noi valori. Daca numărul de variabile crește la 3, lina va deveni un plan, iar pentru oricare număr mai mare de 3, aceasta va deveni un hiperplan. Scopul regresiei liniare este de a găsi hiperplanul care se afla la distanță minimă față de punctele planurilor componente.
+
+\subsubsection{SVR}
+
+Față de regresia simplă, unde scopul este de a minimiza rata de eroare, în SVR se încearcă încadrarea erorii intr-un anumit prag, ceea ce inseamnă că scopul SVR este de a aproxima cea mai buna valoare într-o marjă data, denumita \textit{epsilon-tube}. Spre deosebire de regresia liniară, unde valorile mari produc rezultate direct proporționale, SVR minimizează impactul acestora și prognozează rezultate centrate în jurul unei valori.
+
+\subsubsection{Ridge}
+
+\textit{Ridge Regression} este o versiune liniarizată a regresiei liniare. La funcția de cost originală adăugăm un termen regularizat al cărui scop este de a forță algoritmul de învățare să se potrivească mai bine pe setul de date și să micșoreze varianțele estimărilor.
+
+\subsection{Eroare Rădăcină Medie Pătratică}
+
+Eroare Rădăcină Medie Pătratică (engl. "\textit{root mean square error}", abreviat RMSE) este o metrică folosită pentru a calcula diferența dintre valorile estimate și cele corecte. Calcularea acestuia se face extrăgând radicalul din eroarea medie pătratică. Eroarea medie pătratică reprezintă diferența dintre valoarea prezisă și cea corectă, ridicată la pătrat. Aceasta surprinde abaterea standard a diferenței dintre valorile prezise și cele corecte. Cu cat metrica RMSE este mai mică, cu atât modelul antrenat are o predicție mai corectă și mai apropiată de adevăr. RMSE este folosită pe parcursul acestui proiect pentru a compara diferențele dintre algoritmi.
+
+% Section
+\section{Funcționarea Aplicației}
+
+\subsection{Extragerea Atributelor}
+
+Aplicația dezvoltată se bazează pe extargerea unor caracteristici speciale:
+\begin{itemize}
+    \item numărul de clase;
+    \item numărul de erori de \textit{codying style} (se utilizează framework-ul Cpplint);
+    \item numărul de moșteniri;
+    \item numărul de metodelor virutale;
+    \item numărul membrilor statici;
+    \item numărul variabilelor globale;
+    \item numărul tipului de accesibilitatea a datelor:  \mintinline{text}{public}, \mintinline{text}{private} și \mintinline{text}{protected};
+    \item numărul \mintinline{text}{define}-urilor;
+    \item numărul datelor de tipul \mintinline{text}{template} , \textit{Standard Template Library}, \mintinline{text}{struct}, \mintinline{text}{enum};
+    \item numărul de comentarii;
+    \item numărul de funcții; și
+    \item dimensiunea fișierelor antet (cu extensia \mintinline{text}{.h}) și sursă (cu extensia \mintinline{text}{.cpp}).
+\end{itemize}
+
+Întrucât setul de date inițial nu avea o formă bine definită, datele inițiale au fost parcurse recursiv și au fost copiate în directorul \mintinline{text}{data/preprocess} ce respectă formă standard.
+
+Având o structură standardizată, următoarea etapă a constituit extragerea atributelor utile pentru sistem. Atributele menționate mai sus, sunt extrase cu ajutorul unei funcției ce folosește anumite expresii regulate pentru deteminarea atributelor. După parcurgerea tuturor datelor, se generează fișierele de tip CSV \mintinline{text}{data/features.csv} și \mintinline{text}{data/test_features.csv}.
+
+Este de menționat că acestă etapă durează proporțional cu setul de date de antrenare, deoarece sunt extrase atibutele menționatele mai sus, iar framework-ul Cpplint necesită timp suplimentar pentru verificarea corectitudinii \textit{codying style}-ului.
+
+În cadrul procesului de reantreanare, sistemul, pe baza fișierului încărcat din pagina web, realizează mutarea fișierelor din directorul \mintinline{text}{data/raw/train} în directorul standardizat. După acestă operațiune se generează un nou fișier \mintinline{text}{data/featuresRetrained.csv}. Ulterior, conținutul acestui fișier este adăugat la în fișierul \mintinline{text}{data/features.csv}.
+
+\subsection{Preprocesarea Datelor}
+
+Preprocesarea datelor constă în acele operații aplicate asupra atributelor brute, extrase în etapa anterioara. Ea este alcătuită din următorii pași:
+\begin{itemize}
+    \item citirea datelor din fișierele de tip CSV în cadre de date, ce permit o bună manipulare a lor;
+    \item generarea automată de histograme, care permit vizualizarea datelor de pe fiecare coloană a cadrelor;
+    \item renunțarea la anumite coloane care sunt uniforme și care nu oferă niciun plus de informație modelelor de învățare automată; și
+    \item completarea notelor pentru acele întregistrări din setul de date de antrenare care nu le au setate, printr-o abordare bazată pe algoritmul celor mai apropiați K vecini; și
+    \item selectarea celor mai relevante 15 coloane, pe baza unei metrici stabilite.
+\end{itemize}
+
+Preprocesarea apare în două momente ale rulării aplicației: la antrenarea modelelor de învățare automată, când atributele extrase din seturile de date sunt preprocesare înainte de pasarea lor către algoritmii de învățare, și la analiza unui exemplu nou, mai concret la atribuirea unui exemplar nou trimis prin intermediu interfeței grafice.
+
+\subsection{Antrenarea Modelelor de Învățare Automată}
+
+Problema actuală a fost abordată prin mai multe metode, cu scopul de a vedea diferențele dintre acestea. Astfel, în urma antrenării unui model de random forest regression s-a obținut un RSME de 0.58.
+
+Graficul de mai jos surprinde diferențele (eroarea) dintre datele prezise si cele corecte.
+
+\vspace{0.3cm}
+\begin{center}
+    \includegraphics[width=10cm]{images/rmse.png}
+    \label{fig:1}
+    \captionsetup{justification=centering,margin=1cm}
+    \captionof{figure}{Diagrama de Componente a Aplicației}
+\end{center}
+\vspace{0.3cm}
+
+Datele au fost obținute experimental și pot suferi variații în urma repetării testelor. Experimentul a fost efectuat pe același set de date.
+
+Din experimentele efectuate, vedem că pentru setul de date dat, modelul \textit{Random Forest} are cel mai mic RMSE. Acest lucru ne demonstrează performanță acestui algoritm față de cele clasice, precum și că este cel mai potrivit dintre toate cele de mai sus pentru a rezolva problema dată.
+
+% Section
+\section{Arhitectura Aplicației}
+
+De menționat este faptul că, în diagrama de mai jos, componentele sunt colorate în funcție de membrul echipei care s-a ocupat de dezvoltarea ei, astfel:
+\begin{itemize}
+    \item albastru pentru Apostolescu Ștefan;
+    \item roșu pentru Băjan Ionuț-Mihăiță; și
+    \item gri pentru Iosif George-Andrei.
+\end{itemize}
+
+\vspace{0.3cm}
+\begin{center}
+    \includegraphics[width=12.5cm]{images/components_diagram.png}
+    \label{fig:1}
+    \captionsetup{justification=centering,margin=1cm}
+    \captionof{figure}{Diagrama de Componente a Aplicației}
+\end{center}
+\vspace{0.3cm}
+
+% Section
+\section{Modul de Utilizare al Aplicației}
+
+Interfața grafică îi oferă utilizatorului posibilitatea de a genera o predicție pentru un fișier de intrare, precum și de a corecta și reantrena modelul dacă predicția făcută de acesta nu este corectă.
+
+\subsection{Prezicerea Notei}
+
+Pentru a genera o predicție se incarcă în câmpul "\textit{Archive}" o arhivă ce conține fișierele cu tema studentului. Tema încărcată este apoi procesată, sunt extrase caracteristicile relevante, trecute prin modelul actual și prezisa notă.
+
+\subsection{Ajustarea Modelului}
+
+Ajustarea modelului presupune inserarea în setul de date actual a informațiilor extrase  din fișierele încărcate și a notei considerate corectă, oferită de utilizator. Pe baza acestor informații, parametrii modelului sunt reantrenați și rezultă un model îmbunătățit. Pentru a ajuta modelul, utilizatorul introduce nota corectă in câmpul "\textit{Manually adjusted grade}" și reantrenează modelul pentru noul set de date, apăsând butonul "\textit{Retrain the model}". La apăsarea butonului "\textit{Restart the grading process}" se poate prezice o noua notă pentru aceeași intrare și se poate observa o îmbunătățire a rezultatuli modelului antrenat.
+
+% Section
+\section{Concluzii}
+
+În concluzie, aplicația dezvoltată demonstrează utilitatea algoritmilor de învățare automată, în contextul ușurării muncii profesorilor pentru corectarea unor proiecte.
+
+\end{document}
