@@ -6,6 +6,7 @@ import os
 import typing
 
 FEATURES_DATASET = "../data/features.csv"
+TEST_FEATURES_DATASET = "../data/test_features.csv"
 GRADES_DATASET = "../data/grades.csv"
 HISTOGRAMS_DUMP_FOLDER = "../data/histograms"
 NEIGHBORS_CONSIDERED = 3
@@ -20,27 +21,47 @@ class Preprocessor:
     _grades: np.ndarray = None
 
     def __init__(self, generate_histograms=False):
-        # Read the required dataframes, merge them and get the indexes for
-        # dropped columns
+        # Read the train dataset
         features_df = pandas.read_csv(FEATURES_DATASET, index_col="nr_crt")
+        features_df["is_test"] = 0
+
+        # Append the grades
         grades_df = pandas.read_csv(GRADES_DATASET)
         full_df = pandas.merge(features_df, grades_df)
         full_df = full_df.loc[:, ~full_df.columns.str.match("Unnamed")]
 
-        # Save the processed dataframe
+        # Do miscellaneous operations over the dataset
         self._dataframe = full_df
-
-        # Do miscellaneous operations
         self._drop_columns()
         self._fill_empty_columns()
         if (generate_histograms):
             self._plot_histograms()
 
+        # Read the test dataset
+        test_features_df = pandas.read_csv(TEST_FEATURES_DATASET,
+                                           index_col="nr_crt")
+        test_features_df["is_test"] = 1
+        test_features_df["grade"] = -1
+
+        # Concatenate the datasets
+        self._dataframe = pandas.concat([self._dataframe, test_features_df])
+
+        # Drop columns again
+        self._dataframe = self._dataframe.loc[:, ~self._dataframe.columns.str.
+                                              match("Unnamed")]
+        self._drop_columns()
+
         # Get the grades
         self._grades = self._dataframe.pop("grade")
 
+        # Extract the labels signaling all test entries in the dataset
+        is_test_labels = self._dataframe.pop("is_test")
+
         # Select only the relevant columns
-        self._selector = SelectKBest(f_regression, k=K_BEST_FEATURES_SELECTED)
+        self._selector = SelectKBest(
+            f_regression,
+            k=K_BEST_FEATURES_SELECTED,
+        )
         self._features = self._selector.fit_transform(self._dataframe,
                                                       self._grades)
 
@@ -51,6 +72,9 @@ class Preprocessor:
             indices=True)].tolist()
         for column in selected_columns:
             print("\t- \"{}\"".format(column))
+
+        # Append the previously extracted column
+        self._dataframe["is_test"] = is_test_labels
 
     def _fill_empty_columns(self) -> None:
         # Get column with empty entries
@@ -95,8 +119,21 @@ class Preprocessor:
             del self._dataframe[column]
             print("\t- \"{}\"".format(column))
 
-    def get_dataset(self) -> typing.Tuple[pandas.DataFrame, pandas.DataFrame]:
-        return (self._features, self._grades)
+    def get_dataset(self) -> typing.List[typing.List]:
+        train_entries = []
+        test_entries = []
+        counter = 0
+        for label in self._dataframe["is_test"]:
+            if (label == 1):
+                test_entries.append(self._features[counter])
+            else:
+                train_entries.append(self._features[counter])
+
+            counter += 1
+
+        return [
+            train_entries, self._grades[self._grades > 0], test_entries, None
+        ]
 
     def transform_entry(self, entry: list) -> list:
         # Drop the useless columns

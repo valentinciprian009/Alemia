@@ -16,6 +16,7 @@ WEIGHTS_FILE = "../data/weights.apt"
 # Generates comparision graphs between multiple methods
 # Generates predicted - ground truth graph
 
+
 class Train:
     def __init__(self, check=False):
 
@@ -24,6 +25,7 @@ class Train:
         else:
             self.regressor = LinearRegression()
 
+        #TODO(@apostolescus)
         self.x, self.y = Preprocessor().get_dataset()
 
     # False to get test data, True to get train data
@@ -91,7 +93,7 @@ class Train:
         print("RMSE SVR: ", rmse_SVR)
 
         rmse_Linear = self._calculate_rmse(y_test, linear_predict)
-        print("RMSE Linear Regression: ", rmse_Linear )
+        print("RMSE Linear Regression: ", rmse_Linear)
 
         rmse_Forest = self._calculate_rmse(y_test, random_forest_predict)
         print("RMSE Random Forest: ", rmse_Forest)
@@ -99,23 +101,23 @@ class Train:
         rmse_Ridge = self._calculate_rmse(y_test, ridge_predict)
         print("RMSE Ridge: ", rmse_Ridge)
 
-        x = [ 'Linear Reg.', 'Rand. Forest', 'Ridge', 'SVR']
-        y = [ rmse_Linear, rmse_Forest, rmse_Ridge, rmse_SVR]
+        x = ['Linear Reg.', 'Rand. Forest', 'Ridge', 'SVR']
+        y = [rmse_Linear, rmse_Forest, rmse_Ridge, rmse_SVR]
 
         counter = 0
 
         for i in y:
-            if round(i,4) == 0:
-                x[counter] = x[counter] + "\n" + str(round(i,15))
+            if round(i, 4) == 0:
+                x[counter] = x[counter] + "\n" + str(round(i, 15))
             else:
-                x[counter] = x[counter ] + "\n" + str(round(i,4))
-            counter +=1
+                x[counter] = x[counter] + "\n" + str(round(i, 4))
+            counter += 1
 
-        plt.bar(x,y)
+        plt.bar(x, y)
         plt.ylabel("Valoare RMSE")
         plt.xlabel("Algoritm")
         plt.title("Comparație RMSE")
-        plt.savefig("model_comp.png")
+        plt.savefig("model_comparision.png")
         plt.show()
 
     def _calculate_rmse(self, y_test, y_predicted):

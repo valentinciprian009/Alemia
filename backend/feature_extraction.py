@@ -229,19 +229,27 @@ def merge_csv(src, dest):
 
 
 def init_setup():
-    create_dir("../data/preprocessed/")
     trainDir = "../data/preprocessed/train/"
     testDir = "../data/preprocessed/test/"
+
+    create_dir("../data/preprocessed/")
     create_dir(trainDir)
     create_dir(testDir)
 
     preprocess_datas("../data/raw/train/", trainDir)
     preprocess_datas("../data/raw/test/", testDir)
+
     students = [
         d for d in os.listdir(trainDir)
         if os.path.isdir(os.path.join(trainDir, d))
     ]
     create_csv(trainDir, "../data/features.csv", students)
+
+    students = [
+        d for d in os.listdir(testDir)
+        if os.path.isdir(os.path.join(testDir, d))
+    ]
+    create_csv(testDir, "../data/test_features.csv", students)
 
     return students
 
