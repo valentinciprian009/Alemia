@@ -12,9 +12,9 @@ import joblib
 WEIGHTS_FILE = "../data/weights.apt"
 
 #Training class
-#Allows for two methods selection - RandomForest and LinearRegression
-#
-#
+# Allows for two methods - RandomForest and LinearRegression
+# Generates comparision graphs between multiple methods
+# Generates predicted - ground truth graph
 
 class Train:
     def __init__(self, check=False):
@@ -103,7 +103,7 @@ class Train:
         y = [ rmse_Linear, rmse_Forest, rmse_Ridge, rmse_SVR]
 
         counter = 0
-        
+
         for i in y:
             if round(i,4) == 0:
                 x[counter] = x[counter] + "\n" + str(round(i,15))
