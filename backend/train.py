@@ -7,11 +7,12 @@ from sklearn.linear_model import LinearRegression, SGDRegressor, Ridge
 from sklearn.metrics import mean_squared_error
 from sklearn.svm import SVR
 import math
+import os
 import joblib
 
 WEIGHTS_FILE = "../data/weights.apt"
 
-#Training class
+# Training class
 # Allows for two methods - RandomForest and LinearRegression
 # Generates comparision graphs between multiple methods
 # Generates predicted - ground truth graph
@@ -29,8 +30,11 @@ class Train:
         self.x, self.y, self.test_data, _ = Preprocessor().get_dataset()
 
     # False to get test data, True to get train data
-    def _get_test_train_data(self, train):
+    def _get_test_train_data(self, train, all = False):
 
+        if all is True:
+            return self.x, self.y
+        
         x_train, x_test, y_train, y_test = train_test_split(self.x,
                                                             self.y,
                                                             test_size=0.2)
@@ -42,7 +46,7 @@ class Train:
 
     def train(self):
 
-        x_train, y_train = self._get_test_train_data(True)
+        x_train, y_train = self._get_test_train_data(True, True)
         self.regressor.fit(x_train, y_train)
 
         joblib.dump(self.regressor, WEIGHTS_FILE)
@@ -131,13 +135,21 @@ class Train:
         self.regressor = joblib.load(model_name)
 
         y_predicted = self.regressor.predict(self.test_data)
-
+    
         f = open("../others/results.txt", "w")
 
         for i in y_predicted:
             f.write(str(round(i,2)) + "\n")
   
         return y_predicted
+
+    def _load_true_notes(self):
+
+        array = np.loadtxt("true_notes")
+        print("True notes:",array)
+
+        return array
+
 
 class Predictor:
     def __init__(self, model_name=WEIGHTS_FILE):
@@ -154,6 +166,17 @@ class Predictor:
 
 #How to run
 
-# train = Train(True)
-# train.train()
-# train.calculate_test()
+train = Train(True)
+train.train()
+train.calculate_test()
+
+# true_notes = train._load_true_notes()
+# prd = Predictor()
+# # x_test, y_test = train._get_test_train_data(False)
+# y_true = prd.predict(train.test_data)
+# print(y_true)
+# # y_prd = prd.predict(x_test)
+
+# # print(y_true)
+# print("RMSE: ", train._calculate_rmse(y_true, true_notes))
+
