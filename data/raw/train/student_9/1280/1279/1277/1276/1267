@@ -1,7 +1,0 @@
-﻿  Main.cpp
-c:\users\popacosmin\desktop\pvsz help - copy\pvsz\main.cpp(140): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\popacosmin\desktop\pvsz help - copy\pvsz\main.cpp(164): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\popacosmin\desktop\pvsz help - copy\pvsz\main.cpp(172): warning C4805: '==': unsafe mix of type 'int' and type 'bool' in operation
-c:\users\popacosmin\desktop\pvsz help - copy\pvsz\main.cpp(187): warning C4805: '==': unsafe mix of type 'int' and type 'bool' in operation
-c:\users\popacosmin\desktop\pvsz help - copy\pvsz\main.cpp(191): warning C4805: '==': unsafe mix of type 'int' and type 'bool' in operation
-  PvsZ.vcxproj -> C:\Users\PopaCosmin\Desktop\PvsZ Help - Copy\x64\Debug\PvsZ.exe

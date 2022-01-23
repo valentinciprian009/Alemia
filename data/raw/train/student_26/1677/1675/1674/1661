@@ -1,7 +1,0 @@
-﻿  Main.cpp
-c:\users\bogda\desktop\pvsz\pvsz\main.cpp(238): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
-c:\users\bogda\desktop\pvsz\pvsz\main.cpp(474): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\bogda\desktop\pvsz\pvsz\main.cpp(597): warning C4244: 'initializing': conversion from 'std::streamoff' to 'int', possible loss of data
-LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/PROFILE' specification
-CBucketheadZombie.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:REF' specification
-  PvsZ.vcxproj -> C:\Users\bogda\Desktop\pvsz\x64\Debug\PvsZ.exe

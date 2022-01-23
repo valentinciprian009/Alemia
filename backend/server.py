@@ -16,6 +16,7 @@ from train import Train, Predictor
 DOWNLOAD_DIRECTORY = "uploads"
 EXTRACTION_DIRECTORY = "../data/raw/train"
 GRADES_CSV_FILENAME = "../data/grades.csv"
+FEATURES_CSV_FILENAME = "../data/features.csv"
 INIT_DATASET = False
 TRAIN_MODEL = True
 
@@ -146,6 +147,14 @@ def model_retraining_route():
     result = {"status": "ok"}
     return jsonify(result)
 
+# Get statistics about homeworks
+@app.route("/statistics", methods=["GET"])
+def statistics_route():
+    fields = ['nr_clase','nr_errors','nr_inheritance','nr_virtual','nr_static','nr_global','nr_public','nr_private','nr_protected','nr_define','nr_template','nr_stl','nr_namespace','nr_enum','nr_struct','nr_cpp','nr_comments','nr_function','headers_size','sources_size']
+
+    features = pandas.read_csv(FEATURES_CSV_FILENAME, skipinitialspace=True, usecols=fields)
+
+    return features.to_json(orient ='records')
 
 # Function for retraining the machine learning model
 def retrain_model():

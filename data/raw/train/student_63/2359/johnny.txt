@@ -1,4 +1,0 @@
-johnny.txt		Sat Jan 11 01:10:44 2020
-
-johnny.txt		Sat Jan 11 01:19:44 2020
-

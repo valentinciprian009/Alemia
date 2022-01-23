@@ -1,5 +1,0 @@
-﻿  GameEngine.cpp
-C:\Users\CanPower\source\repos\PvZ_ClassicWarfare\PvZ_ClassicWarfare\GameEngine.cpp(95,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\CanPower\source\repos\PvZ_ClassicWarfare\PvZ_ClassicWarfare\GameEngine.cpp(109,33): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\CanPower\source\repos\PvZ_ClassicWarfare\PvZ_ClassicWarfare\GameEngine.cpp(111,27): warning C4305: '=': truncation from 'double' to 'float'
-  PvZ_ClassicWarfare.vcxproj -> C:\Users\CanPower\source\repos\PvZ_ClassicWarfare\Debug\PvZ_ClassicWarfare.exe
