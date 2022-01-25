@@ -10,8 +10,10 @@ import os
 import time
 import warnings
 import feature_extraction
+import torch_model
 from preprocessor import Preprocessor
-from train import Train, Predictor
+from train import Predictor2, Train, Predictor
+from torch_model import trainModel
 
 DOWNLOAD_DIRECTORY = "uploads"
 EXTRACTION_DIRECTORY = "../data/raw/train"
@@ -23,6 +25,8 @@ TRAIN_MODEL = True
 last_student_scanned = None
 preprocessor = None
 predictor = None
+preprocessor2 = None
+predictor2 = None
 
 # Create the Flask web app
 app = Flask(__name__)
@@ -39,7 +43,7 @@ def default_route():
 @app.route("/predict", methods=["POST"])
 def predict_route():
 
-    global last_student_scanned, preprocessor, predictor
+    global last_student_scanned, preprocessor, predictor, preprocessor2, predictor2
 
     # Get arguments
     uploaded_file = request.files["file"]
@@ -70,6 +74,11 @@ def predict_route():
         grade = predictor.predict([features])[0]
         grade = round(grade, 2)
 
+        # grade2 = predictor2.predict([features])
+        # print(grade2)
+        # grade2 = round(grade2, 2)
+        # print(grade2)
+
         # Dump the grade into the specific CSV file
         grades_df = pandas.read_csv(GRADES_CSV_FILENAME)
         grades_df.loc[len(grades_df.index)] = [last_student_scanned, grade]
@@ -79,15 +88,19 @@ def predict_route():
         arr.append(grade)
         arr_names = []
         arr_names.append(uploaded_file.filename)
+        arr_gradesPy=[]
+        # arr_gradesPy.append(grade2)
         # Return a result
         result = {"predicted_grade": arr,
-                  "projects_names": arr_names}
+        "predicted_grade2":arr_gradesPy,
+        "projects_names": arr_names}
         return jsonify(result)
 
     else:
         aux_2 = ""
         arr_names = []
         arr_grades = []
+        arr_gradesPy=[]
         for filename in os.listdir(extraction_full_path+"/"):
             grade = 0
             extraction_full_path = aux+"/"+filename
@@ -100,6 +113,11 @@ def predict_route():
             grade = predictor.predict([features])[0]
             grade = round(grade, 2)
 
+            # grade2 = predictor2.predict([features])
+            # print(grade2)
+            # grade2 = round(grade2, 2)
+            # print(grade2)
+
             # Dump the grade into the specific CSV file
             grades_df = pandas.read_csv(GRADES_CSV_FILENAME)
             grades_df.loc[len(grades_df.index)] = [last_student_scanned, grade]
@@ -108,10 +126,11 @@ def predict_route():
             arr_names.append(filename)
             arr_grades.append(grade)
             aux_2 += "  "+str(grade)
+            # arr_gradesPy.append(grade2) 
             # print(aux_2)
 
         #     # Return a result
-        result = {"predicted_grade": arr_grades, "projects_names": arr_names}
+        result = {"predicted_grade": arr_grades, "predicted_grade2": arr_gradesPy, "projects_names": arr_names}
         return jsonify(result)
 
 
@@ -158,17 +177,21 @@ def statistics_route():
 
 # Function for retraining the machine learning model
 def retrain_model():
-    global predictor, preprocessor
+    global predictor, preprocessor, predictor2, preprocessor2
 
     Train(check=True).train()
     predictor = Predictor()
     preprocessor = Preprocessor()
 
+    trainModel()
+    predictor2 = Predictor2("../data/model.pt")
+    preprocessor2 = Preprocessor()
+
     print("[+] Successfully retrained the model")
 
 
 def main():
-    global preprocessor, predictor
+    global preprocessor, predictor, preprocessor2, predictor2
 
     # Initialize the dataset
     if (INIT_DATASET):
@@ -181,6 +204,10 @@ def main():
     # Initialize some parts of the pipeline
     predictor = Predictor()
     preprocessor = Preprocessor()
+
+    trainModel()
+    predictor2 = Predictor2("../data/model.pt")
+    preprocessor2 = Preprocessor()
 
     # Run the web server
     app.run(host="localhost", port=3001, debug=True)

@@ -9,6 +9,15 @@ from sklearn.svm import SVR
 import math
 import os
 import joblib
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torch.optim as optim
+import pandas as pd
+from torchvision.datasets import MNIST
+from torch.utils.data import DataLoader
+from torchvision import transforms
+from torch_model import trainModel
 
 WEIGHTS_FILE = "../data/weights.apt"
 
@@ -17,6 +26,35 @@ WEIGHTS_FILE = "../data/weights.apt"
 # Generates comparision graphs between multiple methods
 # Generates predicted - ground truth graph
 
+class MLP(nn.Module):
+  '''
+    Multilayer Perceptron.
+  '''
+  def __init__(self):
+    super().__init__()
+    self.layers = nn.Sequential(
+      nn.Flatten(),
+      nn.Linear(32 * 32 * 3, 64),
+      nn.ReLU(),
+      nn.Linear(64, 32),
+      nn.ReLU(),
+      nn.Linear(32, 10)
+    )
+
+
+  def forward(self, x):
+    '''Forward pass'''
+    return self.layers(x)
+
+class RegressionModel(nn.Module):
+    def __init__(self, in_feat=1, out_feat=1):
+        super().__init__()
+        self.fc = nn.Linear(in_feat, out_feat) # Definesc o retea neuronala cu un singur strat Fully Connected
+
+    def forward(self, x):
+        print(x)
+        out = self.fc(x)
+        return out
 
 class Train:
     def __init__(self, check=False):
@@ -153,15 +191,60 @@ class Train:
 
 class Predictor:
     def __init__(self, model_name=WEIGHTS_FILE):
-
         self.model = joblib.load(model_name)
 
+            
     # returns <class 'numpy.ndarray'>
     def predict(self, features):
-
+        
         prediction = self.model.predict(features)
 
+
+        
+
         return prediction
+
+
+class Predictor2:
+    def __init__(self, model_name=WEIGHTS_FILE):
+        self.model=RegressionModel(20, 1)
+        self.model.load_state_dict(torch.load(model_name))
+        self.model.eval()
+        print(self.model.state_dict())
+        self.test_set = trainModel()
+
+            
+    # returns <class 'numpy.ndarray'>
+    def predict(self, features):
+        test_loader = torch.utils.data.DataLoader(self.test_set, batch_size=32, shuffle=False)
+        eval_outputs = []
+        true_labels = []
+        x = []
+
+        with torch.no_grad():
+            for batch in test_loader:
+                inputs, labels = batch['features'], batch['labels']
+                # calculate outputs by running images through the network
+                outputs = self.model(inputs)
+                eval_outputs += outputs.squeeze(dim=1).tolist()
+                true_labels += labels.squeeze(dim=1).tolist()
+                x += inputs.squeeze(dim=1).tolist()
+
+        # print(true_labels)
+        # print(eval_outputs)
+        # print(x)
+
+        tmp = 0
+        count = 0
+        for i in true_labels:
+            tmp += i
+            count += 1
+
+        tmp /= count
+
+        print(tmp)
+
+        return tmp
 
 
 # How to run

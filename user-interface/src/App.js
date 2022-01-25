@@ -16,10 +16,10 @@ import {
 import axios from "axios"
 import "./stylesheets/App.css"
 
-const API_BASE_ADDRESS = "http://20.115.8.75:3001"
+const API_BASE_ADDRESS = "http://localhost:3001"
 
-function createData(name, grade) {
-    return { name, grade };
+function createData(name, grade,grade2) {
+    return { name, grade,grade2 };
 }
 
 class App extends React.Component {
@@ -28,6 +28,7 @@ class App extends React.Component {
         current_step: 1,
         selected_filename: "Archive",
         predicted_grade: "NaN",
+        predicted_grade2:"NaN",
         adjusted_grade: "",
         projects_names:"",
         rows:[]
@@ -64,17 +65,20 @@ class App extends React.Component {
             var arr=[]
             for(let i=0;i<response.data.predicted_grade.length;i++)
             {
-                arr.push(createData(response.data.projects_names[i],response.data.predicted_grade[i]))
+                arr.push(createData(response.data.projects_names[i],response.data.predicted_grade[i],response.data.predicted_grade2[i]))
             }
             this.setState({
                 current_step: 2,
                 selected_filename: event.target.files[0].name,
                 predicted_grade: response.data.predicted_grade,
+                predicted_grade2:response.data.predicted_grade2,
                 projects_names: response.data.projects_names,
                 rows:arr
             })
             
         }).catch(error => console.log(error));
+
+        console.log(this.arr)
     }
 
     adjustGrade(event) {
@@ -178,6 +182,7 @@ class App extends React.Component {
                                                     {/* <TableCell>Dessert (100g serving)</TableCell> */}
                                                     <TableCell><b>Project Name</b></TableCell>
                                                     <TableCell><b>Grade</b></TableCell>
+                                                    <TableCell><b>Grade with PyTorch</b></TableCell>
                                                 </TableRow>
                                                 </TableHead>
                                                 <TableBody>
@@ -187,6 +192,7 @@ class App extends React.Component {
                                                         >
                                                         <TableCell>{row.name}</TableCell>
                                                         <TableCell>{row.grade}</TableCell>
+                                                        <TableCell>{row.grade2}</TableCell>
                                                         </TableRow>
                                                     ))}
                                                 </TableBody>
