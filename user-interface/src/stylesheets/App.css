@@ -1,45 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Damion&display=swap");
 
-.App{
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    transform: translateY(-50%);
-    text-align: center;
-    z-index: 1000;
+.App {
+  position: absolute;
+  /* top: 50%; */
+  width: 100%;
+  /* transform: translateY(-50%); */
+  text-align: center;
+  z-index: 1000;
+  display: flex;
 }
 
-.App .logo-container{
-    margin-bottom: 30px;
+.App .logo-container {
+  margin-bottom: 30px;
 }
 
-.App .logo-container h1{
-    position: relative;
-    display: inline-block;
-    width: 100px;
-    top: 20px;
-    margin-left: 20px;
-    font-family: 'Damion', cursive;
-    font-size: 60px;
+.App .logo-container h1 {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  top: 20px;
+  margin-left: 20px;
+  font-family: "Damion", cursive;
+  font-size: 60px;
 }
 
-.App .process-step{
-    text-align: left;
-    background-color: #f1f2f6;
-    margin-bottom: 20px;
-    padding: 20px 30px;
-    border-width: 2px;
-    border-style: solid;
+.App .process-step {
+  text-align: left;
+  background-color: #f1f2f6;
+  margin-bottom: 20px;
+  padding: 20px 30px;
+  border-width: 2px;
+  border-style: solid;
 }
 
-.App .process-step.done{
-    border-color: #4cd137;
+.App .process-step.done {
+  border-color: #4cd137;
 }
 
-.App .process-step.current{
-    border-color: #e84118;
+.App .process-step.current {
+  border-color: #e84118;
 }
 
-.App .process-step.inactive{
-    border-color: #353b48;
+.App .process-step.inactive {
+  border-color: #353b48;
 }
+
+.tabelul {
+  text-align: left;
+  background-color: #f1f2f6;
+  margin-bottom: 20px;
+  padding: 20px 30px;
+  border-width: 2px;
+  border-style: solid;
+  position: relative;
+}
+
+.tabelAfisare {
+  width: 100%;
+  table-layout: fixed;
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  /* word-break: break-all; */
+}
+
+.my_td {
+  padding: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid black;
+}
+
+.my_th {
+  border: 1px solid black;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.nume {
+  border: 1px solid black;
+  text-align: center;
+  font-size: 40px;
+  color: rgb(233, 99, 10);
+}
+
+.tbody {
+  border-top: 25px solid;
+}
+/* 
+.td {
+  width: 10px;
+  height: 20px;
+}
+
+.tr {
+  width: 10px;
+  height: 20px;
+} */

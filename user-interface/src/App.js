@@ -16,7 +16,7 @@ import {
 import axios from "axios"
 import "./stylesheets/App.css"
 
-const API_BASE_ADDRESS = "http://20.115.8.75:3001"
+const API_BASE_ADDRESS = "http://localhost:3001"
 
 function createData(name, grade) {
     return { name, grade };
@@ -30,7 +30,8 @@ class App extends React.Component {
         predicted_grade: "NaN",
         adjusted_grade: "",
         projects_names:"",
-        rows:[]
+        rows:[],
+        statistics:[]
     }
 
     constructor(props) {
@@ -46,6 +47,7 @@ class App extends React.Component {
         this.sendChangeRequest = this.sendChangeRequest.bind(this)
         this.retrainModel = this.retrainModel.bind(this)
         this.restartGradingProcess = this.restartGradingProcess.bind(this)
+        this.viewStatistics=this.viewStatistics.bind(this)
 
     }
 
@@ -92,6 +94,24 @@ class App extends React.Component {
                 adjusted_grade: this.state.adjusted_grade
             }
         }).catch(error => console.log(error));
+    }
+
+    viewStatistics(){
+        axios.get(API_BASE_ADDRESS + "/statistics", {
+            headers: {
+                "Access-Control-Allow-Origin": "*"
+            },
+            params: {
+                adjusted_grade: this.state.adjusted_grade
+            }
+        }).then((response=>{
+            console.log(response.data)
+            this.setState({
+                statistics:response.data
+            })
+            console.log(this.state.statistics)
+
+        })).catch(error => console.log(error));
     }
 
     retrainModel() {
@@ -247,6 +267,54 @@ class App extends React.Component {
 
                     </Jumbotron>
 
+                    <Jumbotron className={second_step_classes}>
+                        <h3>
+                            View Statistics
+                        </h3>
+                        <Button onClick={this.viewStatistics} variant="secondary"
+                            size="sm"
+                            block>Get Statistics</Button>
+                        {
+                            
+                            
+                            this.state.statistics?
+                            <div>
+                                <br></br>
+                            <Table striped bordered hover className="tabelAfisare">
+                                <thead>
+                                {/* <tr>
+                                    {
+                                        
+                                        this.state.statistics[0]? Object.keys( this.state.statistics[0] ).map((e,idx)=>{
+                                                    return <tr key={idx}>{ this.state.statistics[0][e]}</tr>
+                                                })
+                                        
+                                            :<></>
+                                    }
+                                </tr> */}
+                                </thead>
+                                <tbody>
+                                    {
+                                        this.state.statistics.map((e,idx)=>{
+                                            
+                                            return <tr key={idx}>
+                                                <th className="nume">{this.state.projects_names[idx]}</th>
+                                            {Object.keys(e).map((key,idx) =>{
+                                                return <tr><th className="my_th">{key}</th><td className="my_td">{e[key]}</td></tr>
+                                            
+                                                })
+                                            }
+                                            <br></br>
+                                            </tr>
+                                            
+                                        })
+                                    }
+                                </tbody>
+                            </Table></div>:<></>
+                            
+                        }
+                    </Jumbotron>
+                
                 </Container>
 
             </div>

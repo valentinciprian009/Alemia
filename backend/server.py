@@ -17,6 +17,7 @@ DOWNLOAD_DIRECTORY = "uploads"
 EXTRACTION_DIRECTORY = "../data/raw/train"
 GRADES_CSV_FILENAME = "../data/grades.csv"
 FEATURES_CSV_FILENAME = "../data/features.csv"
+RETRAINED_PROJECT_CSV = "../data/my_data.csv"
 INIT_DATASET = False
 TRAIN_MODEL = True
 
@@ -56,7 +57,9 @@ def predict_route():
     os.makedirs(extraction_full_path)
     with zipfile.ZipFile(full_path, "r") as zip_file:
         zip_file.extractall(extraction_full_path)
-
+    output = open("../data/my_data.csv", "w")
+    output.write("nr_crt,label,nr_clase,nr_errors,nr_inheritance,nr_virtual,nr_static,nr_global,nr_public,nr_private,nr_protected,nr_define,nr_template,nr_stl,nr_namespace,nr_enum,nr_struct,nr_cpp,nr_comments,nr_function,headers_size,sources_size,\n")
+    output.close()
     aux = extraction_full_path
     print(len(next(os.walk(extraction_full_path+"/"))[1]))
     if(len(next(os.walk(extraction_full_path+"/"))[1]) == 1):
@@ -85,6 +88,7 @@ def predict_route():
         return jsonify(result)
 
     else:
+        my_data=[]
         aux_2 = ""
         arr_names = []
         arr_grades = []
@@ -95,6 +99,12 @@ def predict_route():
             features = feature_extraction.retrain_data_one(
                 extraction_full_path+"/")
             features = preprocessor.transform_entry(features)
+
+            fields = ['nr_clase','nr_errors','nr_inheritance','nr_virtual','nr_static','nr_global','nr_public','nr_private','nr_protected','nr_define','nr_template','nr_stl','nr_namespace','nr_enum','nr_struct','nr_cpp','nr_comments','nr_function','headers_size','sources_size']
+
+            read_file = pandas.read_csv(RETRAINED_PROJECT_CSV, skipinitialspace=True, usecols=fields)
+            my_data.append(read_file.to_json(orient ='records'))
+
 
             # Predict the grade
             grade = predictor.predict([features])[0]
@@ -111,7 +121,9 @@ def predict_route():
             # print(aux_2)
 
         #     # Return a result
-        result = {"predicted_grade": arr_grades, "projects_names": arr_names}
+
+        result = {"predicted_grade": arr_grades, "projects_names": arr_names,"my_data":my_data}
+        print(result)
         return jsonify(result)
 
 
@@ -152,7 +164,7 @@ def model_retraining_route():
 def statistics_route():
     fields = ['nr_clase','nr_errors','nr_inheritance','nr_virtual','nr_static','nr_global','nr_public','nr_private','nr_protected','nr_define','nr_template','nr_stl','nr_namespace','nr_enum','nr_struct','nr_cpp','nr_comments','nr_function','headers_size','sources_size']
 
-    features = pandas.read_csv(FEATURES_CSV_FILENAME, skipinitialspace=True, usecols=fields)
+    features = pandas.read_csv(RETRAINED_PROJECT_CSV, skipinitialspace=True, usecols=fields)
 
     return features.to_json(orient ='records')
 
