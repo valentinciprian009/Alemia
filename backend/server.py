@@ -74,10 +74,10 @@ def predict_route():
         grade = predictor.predict([features])[0]
         grade = round(grade, 2)
 
-        # grade2 = predictor2.predict([features])
-        # print(grade2)
-        # grade2 = round(grade2, 2)
-        # print(grade2)
+        grade2 = predictor2.predict([features])
+        print(grade2)
+        grade2 = round(grade2, 2)
+        print(grade2)
 
         # Dump the grade into the specific CSV file
         grades_df = pandas.read_csv(GRADES_CSV_FILENAME)
@@ -89,7 +89,7 @@ def predict_route():
         arr_names = []
         arr_names.append(uploaded_file.filename)
         arr_gradesPy=[]
-        # arr_gradesPy.append(grade2)
+        arr_gradesPy.append(grade2)
         # Return a result
         result = {"predicted_grade": arr,
         "predicted_grade2":arr_gradesPy,
@@ -113,10 +113,10 @@ def predict_route():
             grade = predictor.predict([features])[0]
             grade = round(grade, 2)
 
-            # grade2 = predictor2.predict([features])
-            # print(grade2)
-            # grade2 = round(grade2, 2)
-            # print(grade2)
+            grade2 = predictor2.predict([features])
+            print(grade2)
+            grade2 = round(grade2, 2)
+            print(grade2)
 
             # Dump the grade into the specific CSV file
             grades_df = pandas.read_csv(GRADES_CSV_FILENAME)
@@ -126,7 +126,7 @@ def predict_route():
             arr_names.append(filename)
             arr_grades.append(grade)
             aux_2 += "  "+str(grade)
-            # arr_gradesPy.append(grade2) 
+            arr_gradesPy.append(grade2) 
             # print(aux_2)
 
         #     # Return a result
