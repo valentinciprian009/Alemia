@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from cgitb import text
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from Crypto.Hash import MD5
@@ -19,6 +20,7 @@ DOWNLOAD_DIRECTORY = "uploads"
 EXTRACTION_DIRECTORY = "../data/raw/train"
 GRADES_CSV_FILENAME = "../data/grades.csv"
 FEATURES_CSV_FILENAME = "../data/features.csv"
+RETRAINED_PROJECT_CSV = "../data/my_data.csv"
 INIT_DATASET = False
 TRAIN_MODEL = True
 
@@ -61,6 +63,10 @@ def predict_route():
     with zipfile.ZipFile(full_path, "r") as zip_file:
         zip_file.extractall(extraction_full_path)
 
+    output = open("../data/my_data.csv", "w")
+    output.write("nr_crt,label,nr_clase,nr_errors,nr_inheritance,nr_virtual,nr_static,nr_global,nr_public,nr_private,nr_protected,nr_define,nr_template,nr_stl,nr_namespace,nr_enum,nr_struct,nr_cpp,nr_comments,nr_function,headers_size,sources_size,\n")
+    output.close()
+
     aux = extraction_full_path
     print(len(next(os.walk(extraction_full_path+"/"))[1]))
     if(len(next(os.walk(extraction_full_path+"/"))[1]) == 1):
@@ -90,10 +96,12 @@ def predict_route():
         arr_names.append(uploaded_file.filename)
         arr_gradesPy=[]
         arr_gradesPy.append(grade2)
+        hashes=[]
+        hashes.append(last_student_scanned)
         # Return a result
         result = {"predicted_grade": arr,
         "predicted_grade2":arr_gradesPy,
-        "projects_names": arr_names}
+        "projects_names": arr_names,"hashes" : hashes}
         return jsonify(result)
 
     else:
@@ -101,6 +109,7 @@ def predict_route():
         arr_names = []
         arr_grades = []
         arr_gradesPy=[]
+        hashes = []
         for filename in os.listdir(extraction_full_path+"/"):
             grade = 0
             extraction_full_path = aux+"/"+filename
@@ -118,9 +127,12 @@ def predict_route():
             grade2 = round(grade2, 2)
             print(grade2)
 
+            aux_aux = last_student_scanned + str(time.time())
+            aux_hash = MD5.new(aux_aux.encode("utf-8")).hexdigest()
+            hashes.append(aux_hash)
             # Dump the grade into the specific CSV file
             grades_df = pandas.read_csv(GRADES_CSV_FILENAME)
-            grades_df.loc[len(grades_df.index)] = [last_student_scanned, grade]
+            grades_df.loc[len(grades_df.index)] = [aux_hash, grade]
             grades_df = grades_df[["label", "grade"]]
             grades_df.to_csv(GRADES_CSV_FILENAME, index=False)
             arr_names.append(filename)
@@ -130,7 +142,7 @@ def predict_route():
             # print(aux_2)
 
         #     # Return a result
-        result = {"predicted_grade": arr_grades, "predicted_grade2": arr_gradesPy, "projects_names": arr_names}
+        result = {"predicted_grade": arr_grades, "predicted_grade2": arr_gradesPy, "projects_names": arr_names, "hashes" : hashes}
         return jsonify(result)
 
 
@@ -142,10 +154,12 @@ def grade_adjustment_route():
 
     # Get arguments
     adjusted_grade = request.args.get("adjusted_grade", type=float)
+    get_hash=request.args.get("hash")
+    print(get_hash)
 
     # Save the adjusted grade into the labels file
     grades_df = pandas.read_csv(GRADES_CSV_FILENAME)
-    grades_df.loc[grades_df["label"] == last_student_scanned,
+    grades_df.loc[grades_df["label"] == get_hash,
                   "grade"] = adjusted_grade
     grades_df = grades_df[["label", "grade"]]
     grades_df.to_csv(GRADES_CSV_FILENAME, index=False)
@@ -171,7 +185,7 @@ def model_retraining_route():
 def statistics_route():
     fields = ['nr_clase','nr_errors','nr_inheritance','nr_virtual','nr_static','nr_global','nr_public','nr_private','nr_protected','nr_define','nr_template','nr_stl','nr_namespace','nr_enum','nr_struct','nr_cpp','nr_comments','nr_function','headers_size','sources_size']
 
-    features = pandas.read_csv(FEATURES_CSV_FILENAME, skipinitialspace=True, usecols=fields)
+    features = pandas.read_csv(RETRAINED_PROJECT_CSV, skipinitialspace=True, usecols=fields)
 
     return features.to_json(orient ='records')
 

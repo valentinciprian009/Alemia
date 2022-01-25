@@ -211,14 +211,20 @@ def extract_zip(zipPath, destPath, scope):
 def merge_csv(src, dest):
     file1 = open(dest, "r+")
     file2 = open(src, "r")
-
     Lines = file1.readlines()
-    last_line = Lines[-1]
-    last_index = last_line.split(",")[0]
+    if Lines==[]:
+        last_index = -1
+    else:
+        last_line = Lines[-1]
+        last_index = last_line.split(",")[0]
+
+
     Lines2 = file2.readlines()
 
     for line in Lines2[1:]:
         fields = line.split(",")
+        if last_index == "nr_crt":
+            last_index = "-1"
         nr_crt = int(fields[0]) + int(last_index) + 1
         file1.write(str(nr_crt) + ",")
         for f in fields[1:len(fields) - 1]:
@@ -270,7 +276,9 @@ def retrain_data_one(path_to_new_label):
     create_csv(trainDir, "../data/featuresRetrained.csv", newLabels)
     new_data = merge_csv("../data/featuresRetrained.csv",
                          "../data/features.csv")
-    os.remove("../data/featuresRetrained.csv")
+                         
+    my_data = merge_csv("../data/featuresRetrained.csv",
+                         "../data/my_data.csv")
 
     new_data = (new_data[0].split(","))[1:-1]
 
