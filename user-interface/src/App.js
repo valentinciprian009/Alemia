@@ -6,6 +6,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { Dropdown } from "react-bootstrap";
+import Select from 'react-select';
 import {
     Container,
     Jumbotron,
@@ -22,6 +24,17 @@ function createData(name, grade,grade2) {
     return { name, grade,grade2 };
 }
 
+// const options = [
+//     { value: 'chocolate', label: 'Chocolate' },
+//     { value: 'strawberry', label: 'Strawberry' },
+//     { value: 'vanilla', label: 'Vanilla' }
+//   ]
+
+function createChoose(name,hash)
+{
+    return {value:name,label:hash}
+}
+
 class App extends React.Component {
 
     default_state = {
@@ -32,8 +45,16 @@ class App extends React.Component {
         adjusted_grade: "",
         projects_names:"",
         rows:[],
-        statistics:[]
+        statistics:[],
+        hashes:[],
+        options:[],
+        selectedOption: null
     }
+    handleChange=(selectedOption)=>{
+        this.setState({selectedOption})
+        console.log(selectedOption)
+    }
+    
 
     constructor(props) {
 
@@ -50,8 +71,10 @@ class App extends React.Component {
         this.restartGradingProcess = this.restartGradingProcess.bind(this)
         this.viewStatistics=this.viewStatistics.bind(this)
     }
+    
 
     selectArchive(event) {
+
 
         var form_data = new FormData();
 
@@ -74,8 +97,14 @@ class App extends React.Component {
                 predicted_grade: response.data.predicted_grade,
                 predicted_grade2:response.data.predicted_grade2,
                 projects_names: response.data.projects_names,
-                rows:arr
+                rows:arr,
+                hashes:response.data.hashes
             })
+            for(let i=0;i<response.data.projects_names.length;i++)
+            {
+                this.state.options.push(createChoose(response.data.hashes[i],response.data.projects_names[i]))
+            }
+
             
         }).catch(error => console.log(error));
 
@@ -85,18 +114,28 @@ class App extends React.Component {
     adjustGrade(event) {
         this.setState({
             adjusted_grade: event.target.value
+            
         })
     }
 
     sendChangeRequest() {
-        axios.get(API_BASE_ADDRESS + "/adjust_grade", {
-            headers: {
-                "Access-Control-Allow-Origin": "*"
-            },
-            params: {
-                adjusted_grade: this.state.adjusted_grade
-            }
-        }).catch(error => console.log(error));
+        if(this.state.selectedOption==null)
+        {
+            window.alert("Nothing selected!")
+        }
+        else
+        {
+            console.log(this.state.selectedOption.value)
+            axios.get(API_BASE_ADDRESS + "/adjust_grade", {
+                headers: {
+                    "Access-Control-Allow-Origin": "*"
+                },
+                params: {
+                    adjusted_grade: this.state.adjusted_grade,
+                    hash:this.state.selectedOption.value
+                }
+            }).catch(error => console.log(error));
+        } 
     }
 
     viewStatistics(){
@@ -130,6 +169,7 @@ class App extends React.Component {
     }
 
     render() {
+        const selectedOption=this.state.selectedOption
 
         var first_step_classes = ["process-step"]
         var second_step_classes = ["process-step"]
@@ -224,6 +264,27 @@ class App extends React.Component {
                         </div>
                         
                         
+                        <br>
+                        </br>
+                        <br>
+                        </br>
+
+                        <div>
+                            {(() => {
+                                if (this.state.projects_names=="") {
+                                return (
+                                    <div></div>
+                                )
+                                } 
+                                else {
+                                return (
+                                    <div>
+                                        <Select options={this.state.options} value={selectedOption} onChange={this.handleChange}></Select>
+                                    </div>
+                                )
+                                }
+                            })()}
+                        </div>
                         <br>
                         </br>
                         <br>
