@@ -18,10 +18,10 @@ import {
 import axios from "axios"
 import "./stylesheets/App.css"
 
-const API_BASE_ADDRESS = "http://localhost:3001"
+const API_BASE_ADDRESS = "http://20.185.89.129:3001"
 
-function createData(name, grade,grade2) {
-    return { name, grade,grade2 };
+function createData(name, grade, grade2) {
+    return { name, grade, grade2 };
 }
 
 // const options = [
@@ -30,9 +30,8 @@ function createData(name, grade,grade2) {
 //     { value: 'vanilla', label: 'Vanilla' }
 //   ]
 
-function createChoose(name,hash)
-{
-    return {value:name,label:hash}
+function createChoose(name, hash) {
+    return { value: name, label: hash }
 }
 
 class App extends React.Component {
@@ -41,20 +40,20 @@ class App extends React.Component {
         current_step: 1,
         selected_filename: "Archive",
         predicted_grade: "NaN",
-        predicted_grade2:"NaN",
+        predicted_grade2: "NaN",
         adjusted_grade: "",
-        projects_names:"",
-        rows:[],
-        statistics:[],
-        hashes:[],
-        options:[],
+        projects_names: "",
+        rows: [],
+        statistics: [],
+        hashes: [],
+        options: [],
         selectedOption: null
     }
-    handleChange=(selectedOption)=>{
-        this.setState({selectedOption})
+    handleChange = (selectedOption) => {
+        this.setState({ selectedOption })
         console.log(selectedOption)
     }
-    
+
 
     constructor(props) {
 
@@ -69,9 +68,9 @@ class App extends React.Component {
         this.sendChangeRequest = this.sendChangeRequest.bind(this)
         this.retrainModel = this.retrainModel.bind(this)
         this.restartGradingProcess = this.restartGradingProcess.bind(this)
-        this.viewStatistics=this.viewStatistics.bind(this)
+        this.viewStatistics = this.viewStatistics.bind(this)
     }
-    
+
 
     selectArchive(event) {
 
@@ -86,26 +85,24 @@ class App extends React.Component {
                 "Content-Type": "multipart/form-data"
             }
         }).then(response => {
-            var arr=[]
-            for(let i=0;i<response.data.predicted_grade.length;i++)
-            {
-                arr.push(createData(response.data.projects_names[i],response.data.predicted_grade[i],response.data.predicted_grade2[i]))
+            var arr = []
+            for (let i = 0; i < response.data.predicted_grade.length; i++) {
+                arr.push(createData(response.data.projects_names[i], response.data.predicted_grade[i], response.data.predicted_grade2[i]))
             }
             this.setState({
                 current_step: 2,
                 selected_filename: event.target.files[0].name,
                 predicted_grade: response.data.predicted_grade,
-                predicted_grade2:response.data.predicted_grade2,
+                predicted_grade2: response.data.predicted_grade2,
                 projects_names: response.data.projects_names,
-                rows:arr,
-                hashes:response.data.hashes
+                rows: arr,
+                hashes: response.data.hashes
             })
-            for(let i=0;i<response.data.projects_names.length;i++)
-            {
-                this.state.options.push(createChoose(response.data.hashes[i],response.data.projects_names[i]))
+            for (let i = 0; i < response.data.projects_names.length; i++) {
+                this.state.options.push(createChoose(response.data.hashes[i], response.data.projects_names[i]))
             }
 
-            
+
         }).catch(error => console.log(error));
 
         console.log(this.arr)
@@ -114,17 +111,15 @@ class App extends React.Component {
     adjustGrade(event) {
         this.setState({
             adjusted_grade: event.target.value
-            
+
         })
     }
 
     sendChangeRequest() {
-        if(this.state.selectedOption==null)
-        {
+        if (this.state.selectedOption == null) {
             window.alert("Nothing selected!")
         }
-        else
-        {
+        else {
             console.log(this.state.selectedOption.value)
             axios.get(API_BASE_ADDRESS + "/adjust_grade", {
                 headers: {
@@ -132,28 +127,30 @@ class App extends React.Component {
                 },
                 params: {
                     adjusted_grade: this.state.adjusted_grade,
-                    hash:this.state.selectedOption.value
+                    hash: this.state.selectedOption.value
                 }
             }).catch(error => console.log(error));
-        } 
+        }
     }
 
-    viewStatistics(){
-        axios.get(API_BASE_ADDRESS + "/statistics", {
-            headers: {
-                "Access-Control-Allow-Origin": "*"
-            },
-            params: {
-                adjusted_grade: this.state.adjusted_grade
-            }
-        }).then((response=>{
-            console.log(response.data)
-            this.setState({
-                statistics:response.data
-            })
-            console.log(this.state.statistics)
+    viewStatistics() {
+        if (this.state.selected_filename != "Archive") {
+            axios.get(API_BASE_ADDRESS + "/statistics", {
+                headers: {
+                    "Access-Control-Allow-Origin": "*"
+                },
+                params: {
+                    adjusted_grade: this.state.adjusted_grade
+                }
+            }).then((response => {
+                console.log(response.data)
+                this.setState({
+                    statistics: response.data
+                })
+                console.log(this.state.statistics)
 
-        })).catch(error => console.log(error));
+            })).catch(error => console.log(error));
+        }
     }
 
     retrainModel() {
@@ -169,7 +166,7 @@ class App extends React.Component {
     }
 
     render() {
-        const selectedOption=this.state.selectedOption
+        const selectedOption = this.state.selectedOption
 
         var first_step_classes = ["process-step"]
         var second_step_classes = ["process-step"]
@@ -218,52 +215,52 @@ class App extends React.Component {
 
 
                         <p className="grade">
-                            
+
                             <b>PREDICTED GRADES</b>
-                            
+
                         </p>
                         <p></p>
 
                         <div>
                             {(() => {
-                                if (this.state.rows=="") {
-                                return (
-                                    <div></div>
-                                )
-                                } 
+                                if (this.state.rows == "") {
+                                    return (
+                                        <div></div>
+                                    )
+                                }
                                 else {
-                                return (
-                                    <div>
-                                        <TableContainer component={Paper}>
-                                            <Table sx={{ minWidth: 250 }} size="small" aria-label="a dense table">
-                                                <TableHead>
-                                                <TableRow>
-                                                    {/* <TableCell>Dessert (100g serving)</TableCell> */}
-                                                    <TableCell><b>Project Name</b></TableCell>
-                                                    <TableCell><b>Grade</b></TableCell>
-                                                    <TableCell><b>Grade with PyTorch</b></TableCell>
-                                                </TableRow>
-                                                </TableHead>
-                                                <TableBody>
-                                                    {this.state.rows.map((row) => (
-                                                        <TableRow
-                                                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                                        >
-                                                        <TableCell>{row.name}</TableCell>
-                                                        <TableCell>{row.grade}</TableCell>
-                                                        <TableCell>{row.grade2}</TableCell>
+                                    return (
+                                        <div>
+                                            <TableContainer component={Paper}>
+                                                <Table sx={{ minWidth: 250 }} size="small" aria-label="a dense table">
+                                                    <TableHead>
+                                                        <TableRow>
+                                                            {/* <TableCell>Dessert (100g serving)</TableCell> */}
+                                                            <TableCell><b>Project Name</b></TableCell>
+                                                            <TableCell><b>Grade</b></TableCell>
+                                                            <TableCell><b>Grade with PyTorch</b></TableCell>
                                                         </TableRow>
-                                                    ))}
-                                                </TableBody>
-                                            </Table>
-                                        </TableContainer>
-                                    </div>
-                                )
+                                                    </TableHead>
+                                                    <TableBody>
+                                                        {this.state.rows.map((row) => (
+                                                            <TableRow
+                                                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                                            >
+                                                                <TableCell>{row.name}</TableCell>
+                                                                <TableCell>{row.grade}</TableCell>
+                                                                <TableCell>{row.grade2}</TableCell>
+                                                            </TableRow>
+                                                        ))}
+                                                    </TableBody>
+                                                </Table>
+                                            </TableContainer>
+                                        </div>
+                                    )
                                 }
                             })()}
                         </div>
-                        
-                        
+
+
                         <br>
                         </br>
                         <br>
@@ -271,17 +268,17 @@ class App extends React.Component {
 
                         <div>
                             {(() => {
-                                if (this.state.projects_names=="") {
-                                return (
-                                    <div></div>
-                                )
-                                } 
+                                if (this.state.projects_names == "") {
+                                    return (
+                                        <div></div>
+                                    )
+                                }
                                 else {
-                                return (
-                                    <div>
-                                        <Select options={this.state.options} value={selectedOption} onChange={this.handleChange}></Select>
-                                    </div>
-                                )
+                                    return (
+                                        <div>
+                                            <Select options={this.state.options} value={selectedOption} onChange={this.handleChange}></Select>
+                                        </div>
+                                    )
                                 }
                             })()}
                         </div>
@@ -289,10 +286,10 @@ class App extends React.Component {
                         </br>
                         <br>
                         </br>
-                        
-                        
-                        
-                        
+
+
+
+
                         <Form>
                             <InputGroup className="mb-3">
                                 <Form.Control
@@ -341,14 +338,14 @@ class App extends React.Component {
                             size="sm"
                             block>Get Statistics</Button>
                         {
-                            
-                            
-                            this.state.statistics?
-                            <div>
-                                <br></br>
-                            <Table striped bordered hover className="tabelAfisare">
-                                <thead>
-                                {/* <tr>
+
+
+                            this.state.statistics ?
+                                <div>
+                                    <br></br>
+                                    <Table striped bordered hover className="tabelAfisare">
+                                        <thead>
+                                            {/* <tr>
                                     {
                                         
                                         this.state.statistics[0]? Object.keys( this.state.statistics[0] ).map((e,idx)=>{
@@ -358,26 +355,26 @@ class App extends React.Component {
                                             :<></>
                                     }
                                 </tr> */}
-                                </thead>
-                                <tbody>
-                                    {
-                                        this.state.statistics.map((e,idx)=>{
-                                            
-                                            return <tr key={idx}>
-                                                <th className="nume">{this.state.projects_names[idx]}</th>
-                                            {Object.keys(e).map((key,idx) =>{
-                                                return <tr><th className="my_th">{key}</th><td className="my_td">{e[key]}</td></tr>
-                                            
+                                        </thead>
+                                        <tbody>
+                                            {
+                                                this.state.statistics.map((e, idx) => {
+
+                                                    return <tr key={idx}>
+                                                        <th className="nume">{this.state.projects_names[idx]}</th>
+                                                        {Object.keys(e).map((key, idx) => {
+                                                            return <tr><th className="my_th">{key}</th><td className="my_td">{e[key]}</td></tr>
+
+                                                        })
+                                                        }
+                                                        <br></br>
+                                                    </tr>
+
                                                 })
                                             }
-                                            <br></br>
-                                            </tr>
-                                            
-                                        })
-                                    }
-                                </tbody>
-                            </Table></div>:<></>
-                            
+                                        </tbody>
+                                    </Table></div> : <></>
+
                         }
                     </Jumbotron>
 

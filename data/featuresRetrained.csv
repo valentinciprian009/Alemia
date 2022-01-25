@@ -1,2 +1,2 @@
 nr_crt,label,nr_clase,nr_errors,nr_inheritance,nr_virtual,nr_static,nr_global,nr_public,nr_private,nr_protected,nr_define,nr_template,nr_stl,nr_namespace,nr_enum,nr_struct,nr_cpp,nr_comments,nr_function,headers_size,sources_size,
-0,2fbbd185b625cacbb8b22cb18475eb8f,48,1726,1,34,17,0,70,21,5,50,2,32,18,10,13,47,117,350,47276,97172,
+0,b06e228f7880213b2c2d870dc1c2a684,15,1726,1,0,2,0,24,18,0,41,1,19,12,10,14,15,102,116,22074,38966,
